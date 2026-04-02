@@ -13,9 +13,9 @@
         .bg-atica-green { background-color: #14532d; }
         .text-atica-green { color: #14532d; }
         
-        /* Efecto Grayscale Fundadores */
-        .img-grayscale { filter: grayscale(100%); transition: all 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
-        .group:hover .img-grayscale { filter: grayscale(0%); transform: scale(1.05); }
+        /* Fotos del Equipo siempre a color */
+        .img-team { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .group:hover .img-team { transform: scale(1.05); }
 
         /* Video Hero Principal */
         .hero-video-container {
@@ -32,7 +32,7 @@
             z-index: 1;
         }
 
-        /* Tarjetas de Sectores Dinámicas con Video y Hover */
+        /* Tarjetas de Sectores Dinámicas */
         .sector-card {
             position: relative; height: 350px; overflow: hidden; border-radius: 1rem;
             display: flex; align-items: flex-end; padding: 2rem; transition: all 0.5s ease;
@@ -50,10 +50,9 @@
         .sector-card:hover .sector-video-bg { transform: scale(1.1); opacity: 1; }
         .sector-content { position: relative; z-index: 2; color: white; }
 
-        /* Estilos Chatbot y Menú Móvil */
+        /* Chatbot y Menú Móvil */
         #chat-window { display: none; }
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease; }
-        #mobile-menu { transition: max-height 0.3s ease-out; overflow: hidden; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     </style>
 </head>
@@ -75,10 +74,10 @@
                 <a href="#servicios" class="hover:text-green-700 transition">Servicios</a>
                 <a href="#sectores" class="hover:text-green-700 transition">Sectores</a>
                 <a href="#equipo" class="hover:text-green-700 transition">Equipo</a>
-                <div class="flex items-center space-x-4 border-l pl-4 border-gray-200 text-lg">
-                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-black transition"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#contacto" class="bg-atica-green text-white px-5 py-2.5 rounded hover:bg-green-800 transition shadow-lg">Contacto</a>
+                <div class="flex items-center space-x-4 border-l pl-4 border-gray-200 text-lg text-gray-700">
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-600"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-black"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#contacto" class="bg-atica-green text-white px-5 py-2.5 rounded hover:bg-green-800 transition shadow-lg text-[10px]">Contacto</a>
                 </div>
             </nav>
 
@@ -111,8 +110,8 @@
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Impacto <br><span class="text-green-400">Estratégico</span></h1>
             <p class="text-xl max-w-xl mb-10 font-light opacity-90 leading-relaxed mx-auto md:mx-0">Firma consultora líder en analítica avanzada e Inteligencia Artificial para el mercado corporativo.</p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                <a href="#servicios" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white text-center">Ver Soluciones</a>
-                <a href="#sectores" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white text-center">Nuestros Sectores</a>
+                <a href="#servicios" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white">Ver Soluciones</a>
+                <a href="#sectores" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white">Nuestros Sectores</a>
             </div>
         </div>
     </section>
@@ -171,15 +170,15 @@
     <section id="quienes" class="py-32 px-6 bg-gray-50 border-y">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div class="relative">
-                <img src="https://images.unsplash.com/photo-1454165833767-027eeea15c3e?q=80&w=800" class="rounded-3xl shadow-2xl relative z-10 grayscale hover:grayscale-0 transition duration-700">
+                <img src="https://images.unsplash.com/photo-1454165833767-027eeea15c3e?q=80&w=800" class="rounded-3xl shadow-2xl relative z-10" alt="Consultoría Atics">
                 <div class="absolute -bottom-8 -right-8 bg-atica-green p-10 rounded-2xl text-white shadow-2xl z-20 hidden md:block text-center">
                     <p class="text-5xl font-black leading-none">AI</p>
                     <p class="text-[9px] font-bold uppercase tracking-[0.2em]">Tecnología Nativa</p>
                 </div>
             </div>
             <div>
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">La Firma</h2>
-                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Expertos en el procesamiento de información estratégica.</h3>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Sobre Nosotros</h2>
+                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Transformamos información en poder estratégico.</h3>
                 <p class="text-gray-600 text-lg leading-relaxed mb-8">
                     En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando Inteligencia Artificial para el diseño muestral y aplicativos de captura de datos a medida.
                 </p>
@@ -223,7 +222,7 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center">
             <div class="group cursor-pointer">
                 <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
-                    <img src="img/Eliana Acevedo.png" class="img-grayscale" alt="Eliana Acevedo">
+                    <img src="img/Eliana Acevedo.png" class="img-team" alt="Eliana Acevedo">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Eliana Yaneth Acevedo</h4>
                 <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Gerente General</p>
@@ -231,7 +230,7 @@
             </div>
             <div class="group cursor-pointer">
                 <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
-                    <img src="img/Juan Jose.png" class="img-grayscale" alt="Juan Jose">
+                    <img src="img/Juan Jose.png" class="img-team" alt="Juan Jose">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Juan José Rubio</h4>
                 <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Director Estratégico</p>
@@ -239,10 +238,10 @@
             </div>
             <div class="group cursor-pointer">
                 <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
-                    <img src="img/Luis Bohorquez.png" class="img-grayscale" alt="Luis Bohorquez">
+                    <img src="img/Luis Bohorquez.png" class="img-team" alt="Luis Bohorquez">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Luis Gabriel Bohórquez</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Director de Proyectos y Analítica</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2 text-center">Director de Proyectos y Analítica</p>
                 <div class="mt-4 flex justify-center space-x-3 text-gray-400"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
         </div>
@@ -259,7 +258,7 @@
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
                 </div>
                 <div class="flex space-x-6 text-2xl text-white">
-                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://x.com/grupoatics" target="_blank" class="hover:text-green-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://linkedin.com/company/grupoatics" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://instagram.com/grupoatics" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
