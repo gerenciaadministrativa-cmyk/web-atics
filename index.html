@@ -13,7 +13,7 @@
         .bg-atica-green { background-color: #14532d; }
         .text-atica-green { color: #14532d; }
         
-        /* Efecto Grayscale Fundadores - CORREGIDO */
+        /* Efecto Grayscale Fundadores */
         .img-grayscale { filter: grayscale(100%); transition: all 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
         .group:hover .img-grayscale { filter: grayscale(0%); transform: scale(1.05); }
 
@@ -41,18 +41,19 @@
         .sector-video-bg {
             position: absolute; inset: 0; width: 100%; height: 100%; 
             object-fit: cover; z-index: 0; transition: transform 0.7s ease;
-            opacity: 0.5; /* Se ve oscuro por defecto */
+            opacity: 0.5;
         }
         .sector-overlay {
             position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,83,45,0.9), transparent);
             z-index: 1;
         }
-        .sector-card:hover .sector-video-bg { transform: scale(1.1); opacity: 1; } /* Cobra vida al hover */
+        .sector-card:hover .sector-video-bg { transform: scale(1.1); opacity: 1; }
         .sector-content { position: relative; z-index: 2; color: white; }
 
-        /* Estilos Chatbot */
+        /* Estilos Chatbot y Menú Móvil */
         #chat-window { display: none; }
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease; }
+        #mobile-menu { transition: max-height 0.3s ease-out; overflow: hidden; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     </style>
 </head>
@@ -81,8 +82,22 @@
                 </div>
             </nav>
 
-            <div class="lg:hidden text-atica-green text-2xl">
+            <button onclick="toggleMobileMenu()" class="lg:hidden text-atica-green text-3xl focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 p-6 space-y-4 shadow-xl">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Inicio</a>
+            <a href="#quienes" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Nosotros</a>
+            <a href="#servicios" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Servicios</a>
+            <a href="#sectores" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Sectores</a>
+            <a href="#equipo" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Equipo</a>
+            <hr>
+            <div class="flex space-x-6 text-2xl text-atica-green pt-2">
+                <a href="https://facebook.com/grupoatics" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/grupoatics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#contacto" onclick="toggleMobileMenu()" class="text-sm bg-atica-green text-white px-4 py-2 rounded">Contacto</a>
             </div>
         </div>
     </header>
@@ -92,18 +107,18 @@
             <source src="video/fondo-hero.mp4" type="video/mp4">
         </video>
         <div class="overlay-dark"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white text-center md:text-left">
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Impacto <br><span class="text-green-400">Estratégico</span></h1>
-            <p class="text-xl max-w-xl mb-10 font-light opacity-90 leading-relaxed">Firma consultora líder en analítica avanzada e Inteligencia Artificial.</p>
-            <div class="flex space-x-4">
-                <a href="#servicios" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-lg">Nuestros Servicios</a>
-                <a href="#quienes" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition">La Firma</a>
+            <p class="text-xl max-w-xl mb-10 font-light opacity-90 leading-relaxed mx-auto md:mx-0">Firma consultora líder en analítica avanzada e Inteligencia Artificial para el mercado corporativo.</p>
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
+                <a href="#servicios" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white text-center">Ver Soluciones</a>
+                <a href="#sectores" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white text-center">Nuestros Sectores</a>
             </div>
         </div>
     </section>
 
     <section id="sectores" class="py-24 px-6 bg-white">
-        <div class="max-w-7xl mx-auto text-center md:text-left">
+        <div class="max-w-7xl mx-auto">
             <div class="mb-16">
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 underline decoration-green-500 decoration-4 underline-offset-8">Sectores de Enfoque</h2>
                 <h3 class="text-4xl font-black text-gray-900 uppercase">Donde Generamos Valor</h3>
@@ -163,13 +178,13 @@
                 </div>
             </div>
             <div>
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Sobre Nosotros</h2>
-                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Transformamos información en poder estratégico.</h3>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">La Firma</h2>
+                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Expertos en el procesamiento de información estratégica.</h3>
                 <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                    En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando IA para el diseño muestral y captura de datos a medida.
+                    En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando Inteligencia Artificial para el diseño muestral y aplicativos de captura de datos a medida.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[10px] font-bold text-gray-400 uppercase">
-                    <div class="p-4 border border-gray-200 flex items-center"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento Cualitativo</div>
+                    <div class="p-4 border border-gray-200 flex items-center"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento cualitativo</div>
                     <div class="p-4 border border-gray-200 flex items-center"><i class="fa-solid fa-check text-green-600 mr-3"></i> Análisis Cuantitativo</div>
                 </div>
             </div>
@@ -178,63 +193,57 @@
 
     <section id="servicios" class="py-32 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center mb-20">
-            <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Nuestros Servicios</h2>
-            <h3 class="text-4xl font-black text-gray-900 uppercase">Consultoría Especializada</h3>
+            <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Portafolio</h2>
+            <h3 class="text-4xl font-black text-gray-900 uppercase">Nuestras Líneas de Consultoría</h3>
         </div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-gray-50 p-12 border-b-8 border-atica-green shadow-sm hover:shadow-2xl transition-all group">
                 <i class="fa-solid fa-brain text-4xl text-atica-green mb-6 block group-hover:scale-110 transition"></i>
-                <h4 class="font-bold text-lg mb-4 uppercase text-atica-green leading-tight">IA & Analítica Cualitativa</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Modelos avanzados para el procesamiento inteligente de información compleja.</p>
+                <h4 class="font-bold text-lg mb-4 uppercase text-atica-green">IA & Analítica</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Modelos de Machine Learning aplicados al procesamiento de información cualitativa.</p>
             </div>
             <div class="bg-gray-50 p-12 border-b-8 border-atica-green shadow-sm hover:shadow-2xl transition-all group">
                 <i class="fa-solid fa-chart-line text-4xl text-atica-green mb-6 block group-hover:scale-110 transition"></i>
-                <h4 class="font-bold text-lg mb-4 uppercase text-atica-green leading-tight">Ecosistemas de Visualización</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Dashboards interactivos en Power BI y Tableau para monitoreo de KPIs en tiempo real.</p>
+                <h4 class="font-bold text-lg mb-4 uppercase text-atica-green">Visualización BI</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Dashboards estratégicos en Power BI y Tableau para la toma de decisiones basada en datos.</p>
             </div>
             <div class="bg-gray-50 p-12 border-b-8 border-atica-green shadow-sm hover:shadow-2xl transition-all group">
                 <i class="fa-solid fa-vial text-4xl text-atica-green mb-6 block group-hover:scale-110 transition"></i>
-                <h4 class="font-bold text-lg mb-4 uppercase text-atica-green leading-tight">Diseño Estadístico y Campo</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Levantamiento de información con rigurosidad técnica y aplicativos personalizados.</p>
+                <h4 class="font-bold text-lg mb-4 uppercase text-atica-green">Diseño Muestral</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Metodologías rigurosas para el levantamiento de información cualitativa y cuantitativa.</p>
             </div>
         </div>
     </section>
 
     <section id="equipo" class="py-32 bg-gray-50 px-6">
         <div class="max-w-7xl mx-auto text-center mb-20">
-            <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Liderazgo</h2>
-            <h3 class="text-4xl font-black text-gray-900 uppercase">Directiva Estratégica</h3>
+            <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Directiva</h2>
+            <h3 class="text-4xl font-black text-gray-900 uppercase">Liderazgo Estratégico</h3>
         </div>
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center">
             <div class="group cursor-pointer">
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
                     <img src="img/Eliana Acevedo.png" class="img-grayscale" alt="Eliana Acevedo">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Eliana Yaneth Acevedo</h4>
                 <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Gerente General</p>
-                <div class="mt-4 flex justify-center space-x-3 text-gray-400">
-                    <a href="https://linkedin.com" target="_blank" class="hover:text-atica-green transition"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
+                <div class="mt-4 flex justify-center space-x-3 text-gray-400"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
             <div class="group cursor-pointer">
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
                     <img src="img/Juan Jose.png" class="img-grayscale" alt="Juan Jose">
                 </div>
-                <h4 class="font-bold text-xl uppercase">Juan José Rubio Mesa</h4>
+                <h4 class="font-bold text-xl uppercase">Juan José Rubio</h4>
                 <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Director Estratégico</p>
-                <div class="mt-4 flex justify-center space-x-3 text-gray-400">
-                    <a href="https://linkedin.com" target="_blank" class="hover:text-atica-green transition"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
+                <div class="mt-4 flex justify-center space-x-3 text-gray-400"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
             <div class="group cursor-pointer">
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
                     <img src="img/Luis Bohorquez.png" class="img-grayscale" alt="Luis Bohorquez">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Luis Gabriel Bohórquez</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Director de Proyectos</p>
-                <div class="mt-4 flex justify-center space-x-3 text-gray-400">
-                    <a href="https://linkedin.com" target="_blank" class="hover:text-atica-green transition"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Director de Proyectos y Analítica</p>
+                <div class="mt-4 flex justify-center space-x-3 text-gray-400"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
         </div>
     </section>
@@ -242,15 +251,15 @@
     <footer id="contacto" class="bg-gray-900 text-white py-24 px-6 border-t-8 border-atica-green">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
-                <img src="img/Logo Corporativo.png" alt="Logo" class="h-12 mb-8 brightness-0 invert">
+                <img src="img/Logo Corporativo.png" alt="Logo" class="h-10 mb-8 brightness-0 invert">
                 <h2 class="text-4xl font-black mb-8 text-green-400 uppercase leading-none tracking-tighter">Iniciemos su <br>Proyecto de Datos</h2>
                 <div class="space-y-4 opacity-70 mb-10 text-sm">
                     <p><i class="fa-solid fa-location-dot mr-3 text-green-500"></i> Calle 25 # 69 51, Bogotá, Colombia</p>
                     <p><i class="fa-solid fa-phone mr-3 text-green-500"></i> +57 3239600075</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
                 </div>
-                <div class="flex space-x-6 text-3xl">
-                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook-square"></i></a>
+                <div class="flex space-x-6 text-2xl text-white">
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://x.com/grupoatics" target="_blank" class="hover:text-green-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://linkedin.com/company/grupoatics" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://instagram.com/grupoatics" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
@@ -260,7 +269,7 @@
                 <form action="https://formspree.io/f/gerenciaadministrativa@grupoatics.com" method="POST" class="space-y-4">
                     <input type="text" name="name" required placeholder="Nombre o Razón Social" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
                     <input type="email" name="email" required placeholder="Correo Corporativo" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
-                    <textarea name="message" rows="4" placeholder="¿Cómo podemos apoyar sus necesidades de información?" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg"></textarea>
+                    <textarea name="message" rows="4" placeholder="¿Cómo podemos apoyarle?" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg"></textarea>
                     <button type="submit" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Mensaje</button>
                 </form>
             </div>
@@ -275,10 +284,10 @@
                 <button onclick="toggleChat()" class="text-2xl leading-none">&times;</button>
             </div>
             <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
-                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm">Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>¿En qué sector se desempeña su organización para brindarle una mejor asesoría?</div>
+                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm">Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>Escriba su consulta y le pondremos en contacto con un especialista.</div>
             </div>
             <div class="p-4 border-t bg-white flex space-x-2">
-                <input type="text" id="wa-message" placeholder="Escriba su mensaje aquí..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
+                <input type="text" id="wa-message" placeholder="Escriba aquí..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
                 <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
@@ -288,12 +297,23 @@
     </div>
 
     <script>
-        function toggleChat() { document.getElementById('chatbot').classList.toggle('chat-open'); }
+        // Función Menú Móvil
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Función Chatbot
+        function toggleChat() { 
+            document.getElementById('chatbot').classList.toggle('chat-open'); 
+        }
+
+        // Función WhatsApp
         function sendWhatsApp() {
             const msg = document.getElementById('wa-message').value;
             const phone = "573239600075";
-            if(msg.trim() !== "") {
-                window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+            if(msg.trim() !== "") { 
+                window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank'); 
             }
         }
     </script>
