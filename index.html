@@ -13,7 +13,7 @@
         .bg-atica-green { background-color: #14532d; }
         .text-atica-green { color: #14532d; }
         
-        /* Fotos del Equipo siempre a color */
+        /* Fotos del Equipo: Eliminado el grayscale para que siempre estén a color */
         .img-team { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .group:hover .img-team { transform: scale(1.05); }
 
@@ -50,9 +50,10 @@
         .sector-card:hover .sector-video-bg { transform: scale(1.1); opacity: 1; }
         .sector-content { position: relative; z-index: 2; color: white; }
 
-        /* Chatbot y Menú Móvil */
+        /* Estilos Chatbot y Menú Móvil */
         #chat-window { display: none; }
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease; }
+        #mobile-menu { transition: max-height 0.3s ease-out; overflow: hidden; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     </style>
 </head>
@@ -75,8 +76,8 @@
                 <a href="#sectores" class="hover:text-green-700 transition">Sectores</a>
                 <a href="#equipo" class="hover:text-green-700 transition">Equipo</a>
                 <div class="flex items-center space-x-4 border-l pl-4 border-gray-200 text-lg text-gray-700">
-                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-600"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-black"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-black transition"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="#contacto" class="bg-atica-green text-white px-5 py-2.5 rounded hover:bg-green-800 transition shadow-lg text-[10px]">Contacto</a>
                 </div>
             </nav>
@@ -170,7 +171,7 @@
     <section id="quienes" class="py-32 px-6 bg-gray-50 border-y">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div class="relative">
-                <img src="https://images.unsplash.com/photo-1454165833767-027eeea15c3e?q=80&w=800" class="rounded-3xl shadow-2xl relative z-10" alt="Consultoría Atics">
+                <img src="img/nosotros.png" class="rounded-3xl shadow-2xl relative z-10" alt="Consultoría Atics">
                 <div class="absolute -bottom-8 -right-8 bg-atica-green p-10 rounded-2xl text-white shadow-2xl z-20 hidden md:block text-center">
                     <p class="text-5xl font-black leading-none">AI</p>
                     <p class="text-[9px] font-bold uppercase tracking-[0.2em]">Tecnología Nativa</p>
@@ -183,8 +184,8 @@
                     En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando Inteligencia Artificial para el diseño muestral y aplicativos de captura de datos a medida.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[10px] font-bold text-gray-400 uppercase">
-                    <div class="p-4 border border-gray-200 flex items-center"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento cualitativo</div>
-                    <div class="p-4 border border-gray-200 flex items-center"><i class="fa-solid fa-check text-green-600 mr-3"></i> Análisis Cuantitativo</div>
+                    <div class="p-4 border border-gray-200 flex items-center bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento cualitativo</div>
+                    <div class="p-4 border border-gray-200 flex items-center bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Análisis Cuantitativo</div>
                 </div>
             </div>
         </div>
@@ -296,18 +297,15 @@
     </div>
 
     <script>
-        // Función Menú Móvil
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
 
-        // Función Chatbot
         function toggleChat() { 
             document.getElementById('chatbot').classList.toggle('chat-open'); 
         }
 
-        // Función WhatsApp
         function sendWhatsApp() {
             const msg = document.getElementById('wa-message').value;
             const phone = "573239600075";
