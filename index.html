@@ -6,14 +6,14 @@
     <title>GRUPO ATICS | Consultoría en Inteligencia de Datos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Open Sans', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
         .bg-atica-green { background-color: #14532d; }
         .text-atica-green { color: #14532d; }
         
-        /* Fotos del Equipo: Eliminado el grayscale para que siempre estén a color */
+        /* Fotos del Equipo siempre a color */
         .img-team { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .group:hover .img-team { transform: scale(1.05); }
 
@@ -50,10 +50,9 @@
         .sector-card:hover .sector-video-bg { transform: scale(1.1); opacity: 1; }
         .sector-content { position: relative; z-index: 2; color: white; }
 
-        /* Estilos Chatbot y Menú Móvil */
+        /* Chatbot y Menú Móvil */
         #chat-window { display: none; }
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease; }
-        #mobile-menu { transition: max-height 0.3s ease-out; overflow: hidden; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     </style>
 </head>
@@ -252,28 +251,24 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
                 <img src="img/Logo Corporativo.png" alt="Logo" class="h-12 mb-8 brightness-0 invert">
-                
                 <h2 class="text-4xl font-black mb-8 text-green-400 uppercase leading-none tracking-tighter">Iniciemos su <br>Proyecto de Datos</h2>
-                
                 <div class="space-y-4 opacity-70 mb-10 text-sm">
                     <p><i class="fa-solid fa-location-dot mr-3 text-green-500"></i> Calle 25 # 69 51, Bogotá, Colombia</p>
                     <p><i class="fa-solid fa-phone mr-3 text-green-500"></i> +57 3239600075</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
                 </div>
-
                 <div class="flex space-x-6 text-3xl">
-                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://x.com/grupoatics" target="_blank" class="hover:text-gray-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://linkedin.com/company/grupoatics" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://instagram.com/grupoatics" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-
             <div class="bg-white p-10 rounded-xl shadow-2xl text-gray-900">
                 <form action="https://formspree.io/f/gerenciaadministrativa@grupoatics.com" method="POST" class="space-y-4">
                     <input type="text" name="name" required placeholder="Nombre o Razón Social" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
                     <input type="email" name="email" required placeholder="Correo Corporativo" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
-                    <textarea name="message" rows="4" placeholder="¿Cómo podemos apoyar sus necesidades de información?" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg"></textarea>
+                    <textarea name="message" rows="4" placeholder="¿Cómo podemos apoyarle?" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg"></textarea>
                     <button type="submit" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Mensaje</button>
                 </form>
             </div>
@@ -305,11 +300,9 @@
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
-
         function toggleChat() { 
             document.getElementById('chatbot').classList.toggle('chat-open'); 
         }
-
         function sendWhatsApp() {
             const msg = document.getElementById('wa-message').value;
             const phone = "573239600075";
