@@ -64,29 +64,29 @@
             </div>
             
             <nav class="hidden lg:flex items-center space-x-6 text-[10px] font-bold uppercase text-gray-600">
-                <a href="#inicio" class="hover:text-green-700">Inicio</a>
-                <a href="#quienes" class="hover:text-green-700">Nosotros</a>
-                <a href="#servicios" class="hover:text-green-700">Servicios</a>
-                <a href="#sectores" class="hover:text-green-700">Sectores</a>
-                <a href="#equipo" class="hover:text-green-700">Equipo</a>
+                <a href="#inicio" class="hover:text-green-700 transition">Inicio</a>
+                <a href="#quienes" class="hover:text-green-700 transition">Nosotros</a>
+                <a href="#servicios" class="hover:text-green-700 transition">Servicios</a>
+                <a href="#sectores" class="hover:text-green-700 transition">Sectores</a>
+                <a href="#equipo" class="hover:text-green-700 transition">Equipo</a>
                 <div class="flex items-center space-x-4 border-l pl-4 border-gray-200 text-lg text-gray-700">
-                    <a href="https://facebook.com/grupoatics" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://x.com/grupoatics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#contacto" class="bg-atica-green text-white px-5 py-2.5 rounded hover:bg-green-800 text-[10px]">Contacto</a>
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-black transition"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#contacto" class="bg-atica-green text-white px-5 py-2.5 rounded hover:bg-green-800 transition shadow-lg text-[10px]">Contacto</a>
                 </div>
             </nav>
 
-            <button onclick="toggleMobileMenu()" class="lg:hidden text-atica-green text-3xl">
+            <button onclick="toggleMobileMenu()" class="lg:hidden text-atica-green text-3xl focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-6 space-y-4 shadow-xl">
-            <a href="#inicio" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700">Inicio</a>
-            <a href="#quienes" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700">Nosotros</a>
-            <a href="#servicios" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700">Servicios</a>
-            <a href="#sectores" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700">Sectores</a>
-            <a href="#equipo" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700">Equipo</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 p-6 space-y-4 shadow-xl">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Inicio</a>
+            <a href="#quienes" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Nosotros</a>
+            <a href="#servicios" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Servicios</a>
+            <a href="#sectores" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Sectores</a>
+            <a href="#equipo" onclick="toggleMobileMenu()" class="block text-sm font-bold uppercase text-gray-700 hover:text-green-700">Equipo</a>
             <hr>
             <div class="flex space-x-6 text-2xl text-atica-green pt-2">
                 <a href="https://facebook.com/grupoatics" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -102,11 +102,11 @@
         </video>
         <div class="overlay-dark"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white text-center md:text-left">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 uppercase tracking-tighter">Impacto <br><span class="text-green-400">Estratégico</span></h1>
-            <p class="text-xl max-w-xl mb-10 font-light opacity-90 mx-auto md:mx-0">Firma consultora líder en analítica avanzada e Inteligencia Artificial.</p>
+            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Impacto <br><span class="text-green-400">Estratégico</span></h1>
+            <p class="text-xl max-w-xl mb-10 font-light opacity-90 leading-relaxed mx-auto md:mx-0">Firma consultora líder en analítica avanzada e Inteligencia Artificial para el mercado corporativo.</p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                <a href="#servicios" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs text-white">Ver Soluciones</a>
-                <a href="#sectores" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs text-white">Nuestros Sectores</a>
+                <a href="#servicios" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white">Ver Soluciones</a>
+                <a href="#sectores" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white">Nuestros Sectores</a>
             </div>
         </div>
     </section>
@@ -147,16 +147,16 @@
             <div class="relative">
                 <img src="img/nosotros.png" class="rounded-3xl shadow-2xl relative z-10" alt="Consultoría Atics">
                 <div class="absolute -bottom-8 -right-8 bg-atica-green p-10 rounded-2xl text-white hidden md:block text-center shadow-2xl">
-                    <p class="text-5xl font-black">AI</p><p class="text-[9px] font-bold uppercase tracking-[0.2em]">Tecnología Nativa</p>
+                    <p class="text-5xl font-black leading-none">AI</p><p class="text-[9px] font-bold uppercase tracking-[0.2em]">Tecnología Nativa</p>
                 </div>
             </div>
             <div>
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Sobre Nosotros</h2>
-                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase">Transformamos información en poder estratégico.</h3>
-                <p class="text-gray-600 text-lg mb-8">En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando IA para el diseño muestral y captura de datos.</p>
+                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Transformamos información en poder estratégico.</h3>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando IA para el diseño muestral y aplicativos de captura de datos a medida.</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[10px] font-bold text-gray-400 uppercase">
-                    <div class="p-4 border bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento cualitativo</div>
-                    <div class="p-4 border bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Análisis Cuantitativo</div>
+                    <div class="p-4 border border-gray-200 flex items-center bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento cualitativo</div>
+                    <div class="p-4 border border-gray-200 flex items-center bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Análisis Cuantitativo</div>
                 </div>
             </div>
         </div>
@@ -165,23 +165,23 @@
     <section id="servicios" class="py-32 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center mb-20">
             <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Portafolio</h2>
-            <h3 class="text-4xl font-black text-gray-900 uppercase">Consultoría Especializada</h3>
+            <h3 class="text-4xl font-black text-gray-900 uppercase">Nuestras Líneas de Consultoría</h3>
         </div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-gray-50 p-12 border-b-8 border-atica-green shadow-sm hover:shadow-2xl transition-all group">
-                <i class="fa-solid fa-brain text-4xl text-atica-green mb-6 block group-hover:scale-110"></i>
+                <i class="fa-solid fa-brain text-4xl text-atica-green mb-6 block group-hover:scale-110 transition"></i>
                 <h4 class="font-bold text-lg mb-4 uppercase text-atica-green">IA & Analítica</h4>
-                <p class="text-gray-500 text-sm">Modelos de Machine Learning aplicados al procesamiento de información.</p>
+                <p class="text-gray-500 text-sm leading-relaxed">Modelos de Machine Learning aplicados al procesamiento de información cualitativa.</p>
             </div>
             <div class="bg-gray-50 p-12 border-b-8 border-atica-green shadow-sm hover:shadow-2xl transition-all group">
-                <i class="fa-solid fa-chart-line text-4xl text-atica-green mb-6 block group-hover:scale-110"></i>
+                <i class="fa-solid fa-chart-line text-4xl text-atica-green mb-6 block group-hover:scale-110 transition"></i>
                 <h4 class="font-bold text-lg mb-4 uppercase text-atica-green">Visualización BI</h4>
-                <p class="text-gray-500 text-sm">Dashboards estratégicos en Power BI y Tableau para toma de decisiones.</p>
+                <p class="text-gray-500 text-sm leading-relaxed">Dashboards estratégicos en Power BI y Tableau para la toma de decisiones.</p>
             </div>
             <div class="bg-gray-50 p-12 border-b-8 border-atica-green shadow-sm hover:shadow-2xl transition-all group">
-                <i class="fa-solid fa-vial text-4xl text-atica-green mb-6 block group-hover:scale-110"></i>
+                <i class="fa-solid fa-vial text-4xl text-atica-green mb-6 block group-hover:scale-110 transition"></i>
                 <h4 class="font-bold text-lg mb-4 uppercase text-atica-green">Diseño Muestral</h4>
-                <p class="text-gray-500 text-sm">Metodologías rigurosas para levantamiento de información.</p>
+                <p class="text-gray-500 text-sm leading-relaxed">Metodologías rigurosas para el levantamiento de información cualitativa y cuantitativa.</p>
             </div>
         </div>
     </section>
@@ -193,27 +193,27 @@
         </div>
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center">
             <div class="group cursor-pointer">
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green bg-white shadow-xl">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
                     <img src="img/Eliana Acevedo.png" class="img-team" alt="Eliana Acevedo">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Eliana Yaneth Acevedo</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mt-2">Gerente General</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Gerente General</p>
                 <div class="mt-4 flex justify-center space-x-3 text-gray-400"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
             <div class="group cursor-pointer">
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green bg-white shadow-xl">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
                     <img src="img/Juan Jose.png" class="img-team" alt="Juan Jose">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Juan José Rubio</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mt-2">Director Estratégico</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Director Estratégico</p>
                 <div class="mt-4 flex justify-center space-x-3 text-gray-400"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
             <div class="group cursor-pointer">
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green bg-white shadow-xl">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white">
                     <img src="img/Luis Bohorquez.png" class="img-team" alt="Luis Bohorquez">
                 </div>
                 <h4 class="font-bold text-xl uppercase">Luis Gabriel Bohórquez</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mt-2">Director de Proyectos</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2 text-center">Director de Proyectos y Analítica</p>
                 <div class="mt-4 flex justify-center space-x-3 text-gray-400"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
         </div>
@@ -223,49 +223,65 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
                 <div class="mb-10 border-l-4 border-green-500 pl-5">
-                    <span class="block text-3xl font-black uppercase text-white tracking-tighter">GRUPO ATICS</span>
+                    <span class="block text-3xl font-black uppercase text-white tracking-tighter leading-none">GRUPO ATICS</span>
                     <span class="text-[10px] font-bold text-green-400 uppercase tracking-[0.4em] mt-1 block">Datos que impulsan decisiones</span>
                 </div>
-                <h2 class="text-4xl font-black mb-8 text-green-400 uppercase">Iniciemos su Proyecto</h2>
+                <h2 class="text-4xl font-black mb-8 text-green-400 uppercase leading-none tracking-tighter">Iniciemos su <br>Proyecto de Datos</h2>
                 <div class="space-y-4 opacity-70 mb-10 text-sm">
                     <p><i class="fa-solid fa-location-dot mr-3 text-green-500"></i> Calle 25 # 69 51, Bogotá, Colombia</p>
                     <p><i class="fa-solid fa-phone mr-3 text-green-500"></i> +57 3239600075</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
                 </div>
                 <div class="flex space-x-6 text-3xl">
-                    <a href="https://facebook.com/grupoatics" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://x.com/grupoatics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://linkedin.com/company/grupoatics" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://instagram.com/grupoatics" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-gray-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/company/grupoatics" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/grupoatics" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
+
             <div class="bg-white p-10 rounded-xl shadow-2xl text-gray-900">
                 <form id="contact-form" class="space-y-4">
-                    <input type="text" name="Nombre" required placeholder="Nombre o Razón Social" class="w-full p-4 border bg-gray-50 outline-none rounded-lg">
-                    <input type="email" name="Email" required placeholder="Correo Corporativo" class="w-full p-4 border bg-gray-50 outline-none rounded-lg">
-                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyarles?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg"></textarea>
-                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg">Enviar Mensaje</button>
+                    <input type="text" name="Nombre" required placeholder="Nombre de la Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" name="Contacto" required placeholder="Persona de Contacto" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
+                        <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
+                    </div>
+
+                    <input type="email" name="Email" required placeholder="Correo Corporativo" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
+                    
+                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar sus necesidades de información?" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg"></textarea>
+                    
+                    <div class="flex items-start space-x-3 py-2">
+                        <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500 cursor-pointer">
+                        <label for="habeas-data" class="text-[11px] text-gray-500 leading-tight cursor-pointer">
+                            Autorizo a <b>GRUPO ATICS SAS</b> el tratamiento de mis datos personales únicamente para fines de contacto y respuesta a la presente solicitud.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
-        <p class="mt-20 text-center text-[10px] opacity-40 uppercase border-t border-white/10 pt-10">&copy; 2026 GRUPO ATICS SAS | Bogotá DC</p>
+        <p class="mt-20 text-center text-[10px] opacity-40 uppercase tracking-[0.4em] font-bold border-t border-white/10 pt-10">&copy; 2026 GRUPO ATICS SAS | Bogotá DC, Colombia</p>
     </footer>
 
     <div id="chatbot" class="fixed bottom-8 right-8 z-[100]">
-        <div id="chat-window" class="flex-col w-80 h-[450px] bg-white shadow-2xl rounded-3xl mb-4 border overflow-hidden">
+        <div id="chat-window" class="flex-col w-80 h-[450px] bg-white shadow-2xl rounded-3xl mb-4 border border-gray-100 overflow-hidden">
             <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center">
-                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase">Consultoría Online</span></div>
-                <button onclick="toggleChat()">&times;</button>
+                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest text-white">Consultoría Online</span></div>
+                <button onclick="toggleChat()" class="text-2xl leading-none">&times;</button>
             </div>
             <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
-                <div class="bg-white p-4 rounded-2xl shadow-sm">Hola. Bienvenido a <b>Grupo Atics</b>. Escriba su consulta.</div>
+                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm">Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>Escriba su consulta y le pondremos en contacto con un especialista.</div>
             </div>
             <div class="p-4 border-t bg-white flex space-x-2">
                 <input type="text" id="wa-message" placeholder="Escriba aquí..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
-                <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fa-solid fa-paper-plane"></i></button>
+                <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
-        <button onclick="toggleChat()" class="bg-[#25D366] w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl text-white">
+        <button onclick="toggleChat()" class="bg-[#25D366] w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all text-white active:rotate-12 shadow-green-900/40">
             <i class="fa-brands fa-whatsapp"></i>
         </button>
     </div>
@@ -275,10 +291,9 @@
         form.addEventListener("submit", e => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
-            btn.innerText = "Enviando...";
+            btn.innerText = "Registrando...";
             btn.disabled = true;
 
-// Capturamos los datos del formulario
             const formData = new FormData(form);
             
             // AGREGAMOS LA FECHA ACTUAL AUTOMÁTICAMENTE
@@ -286,26 +301,32 @@
             const fechaFormateada = hoy.toLocaleDateString() + " " + hoy.toLocaleTimeString();
             formData.append("Fecha", fechaFormateada);
 
-            // 1. ENVIAR A GOOGLE SHEETS (TU API DE SHEETDB)
+            // 1. ENVIAR A GOOGLE SHEETS (SHEETDB)
             fetch('https://sheetdb.io/api/v1/25atkoavt2aiy', { 
                 method: 'POST',
                 body: formData
             })
-
             .then(response => {
                 if (response.ok) {
-                    // 2. ENVIAR AL CORREO (FORMSPREE)
+                    // 2. ENVIAR AVISO AL CORREO (FORMSPREE)
                     fetch('https://formspree.io/f/xreooawy', {
                         method: 'POST',
                         body: formData,
                         headers: { 'Accept': 'application/json' }
                     });
 
-                    alert("¡Mensaje recibido! Nos contactaremos pronto.");
+                    alert("¡Mensaje recibido con éxito! Los datos han sido registrados y nos contactaremos pronto.");
                     form.reset();
                     btn.innerText = "Enviar Mensaje";
                     btn.disabled = false;
+                } else {
+                    alert("Hubo un error al procesar el envío. Por favor intente nuevamente.");
+                    btn.disabled = false;
                 }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.disabled = false;
             });
         });
 
