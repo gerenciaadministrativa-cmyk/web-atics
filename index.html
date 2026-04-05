@@ -49,6 +49,10 @@
         #chat-window { display: none; }
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        
+        /* Animación para el mensaje de éxito */
+        .fade-in { animation: fadeIn 0.5s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="bg-white">
@@ -240,28 +244,31 @@
                 </div>
             </div>
 
-            <div class="bg-white p-10 rounded-xl shadow-2xl text-gray-900">
+            <div id="form-container" class="bg-white p-10 rounded-xl shadow-2xl text-gray-900 relative min-h-[500px] flex flex-col justify-center">
                 <form id="contact-form" class="space-y-4">
                     <input type="text" name="Nombre" required placeholder="Nombre de la Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input type="text" name="Contacto" required placeholder="Persona de Contacto" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
                         <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
                     </div>
-
                     <input type="email" name="Email" required placeholder="Correo Corporativo" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg">
-                    
                     <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar sus necesidades de información?" class="w-full p-4 border bg-gray-50 outline-none focus:border-green-600 rounded-lg"></textarea>
-                    
                     <div class="flex items-start space-x-3 py-2">
                         <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500 cursor-pointer">
                         <label for="habeas-data" class="text-[11px] text-gray-500 leading-tight cursor-pointer">
-                            Autorizo a <b>GRUPO ATICS SAS</b> el tratamiento de mis datos personales únicamente para fines de contacto y respuesta a la presente solicitud.
+                            Autorizo a <b>GRUPO ATICS SAS</b> el tratamiento de mis datos personales únicamente para fines de contacto.
                         </label>
                     </div>
-
                     <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Mensaje</button>
                 </form>
+                
+                <div id="success-message" class="hidden text-center fade-in">
+                    <div class="mb-6">
+                        <i class="fa-solid fa-circle-check text-6xl text-green-600"></i>
+                    </div>
+                    <h4 class="text-2xl font-black text-atica-green uppercase mb-4">¡Mensaje Recibido!</h4>
+                    <p class="text-gray-600 leading-relaxed">Gracias por contactarnos. Un consultor experto de <b>Grupo Atics</b> se comunicará con usted en la brevedad posible.</p>
+                </div>
             </div>
         </div>
         <p class="mt-20 text-center text-[10px] opacity-40 uppercase tracking-[0.4em] font-bold border-t border-white/10 pt-10">&copy; 2026 GRUPO ATICS SAS | Bogotá DC, Colombia</p>
@@ -288,6 +295,8 @@
 
     <script>
         const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
         form.addEventListener("submit", e => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
@@ -296,37 +305,38 @@
 
             const formData = new FormData(form);
             
-            // AGREGAMOS LA FECHA ACTUAL AUTOMÁTICAMENTE
             const hoy = new Date();
             const fechaFormateada = hoy.toLocaleDateString() + " " + hoy.toLocaleTimeString();
             formData.append("Fecha", fechaFormateada);
 
-            // 1. ENVIAR A GOOGLE SHEETS (SHEETDB)
+            // 1. ENVIAR A GOOGLE SHEETS (SheetDB)
+            // RECUERDA PONER TU LINK AQUÍ:
             fetch('https://sheetdb.io/api/v1/25atkoavt2aiy', { 
                 method: 'POST',
                 body: formData
             })
             .then(response => {
                 if (response.ok) {
-                    // 2. ENVIAR AVISO AL CORREO (FORMSPREE)
+                    // 2. ENVIAR AVISO AL CORREO (Formspree)
                     fetch('https://formspree.io/f/xreooawy', {
                         method: 'POST',
                         body: formData,
                         headers: { 'Accept': 'application/json' }
                     });
 
-                    alert("¡Mensaje recibido con éxito! Los datos han sido registrados y nos contactaremos pronto.");
-                    form.reset();
-                    btn.innerText = "Enviar Mensaje";
-                    btn.disabled = false;
+                    // EFECTO VISUAL: Ocultar formulario y mostrar éxito
+                    form.style.display = 'none';
+                    successMessage.classList.remove('hidden');
                 } else {
-                    alert("Hubo un error al procesar el envío. Por favor intente nuevamente.");
+                    alert("Hubo un error. Por favor intente nuevamente.");
                     btn.disabled = false;
+                    btn.innerText = "Enviar Mensaje";
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 btn.disabled = false;
+                btn.innerText = "Enviar Mensaje";
             });
         });
 
