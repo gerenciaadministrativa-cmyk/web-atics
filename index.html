@@ -12,31 +12,20 @@
         h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
         .bg-atica-green { background-color: #14532d; }
         .text-atica-green { color: #14532d; }
-        
         .img-team { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .group:hover .img-team { transform: scale(1.05); }
 
-        .hero-video-container {
-            position: relative; height: 85vh; width: 100%; overflow: hidden;
-            background-color: #0a2412;
-        }
-        .hero-video-container video {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0;
-        }
-        .overlay-dark {
-            position: absolute; inset: 0;
-            background: linear-gradient(90deg, rgba(20, 83, 45, 0.9) 0%, rgba(20, 83, 45, 0.3) 100%);
-            z-index: 1;
-        }
+        .hero-video-container { position: relative; height: 85vh; width: 100%; overflow: hidden; background-color: #0a2412; }
+        .hero-video-container video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0; }
+        .overlay-dark { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 83, 45, 0.9) 0%, rgba(20, 83, 45, 0.3) 100%); z-index: 1; }
 
-        /* --- TARJETAS DINÁMICAS --- */
-        .capability-card { position: relative; height: 420px; perspective: 1000px; cursor: pointer; }
+        /* TARJETAS DINÁMICAS */
+        .capability-card { position: relative; height: 380px; perspective: 1000px; cursor: pointer; }
         .card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; }
         .capability-card:hover .card-inner { transform: rotateY(180deg); }
         .card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 1.5rem; overflow: hidden; }
-        .card-back { background-color: #14532d; color: white; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; padding: 2rem; }
-        .sector-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; z-index: 0; }
+        .card-back { background-color: #14532d; color: white; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; padding: 1.5rem; }
+        .sector-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; z-index: 0; }
         .sector-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,36,18,0.9), transparent); z-index: 1; }
 
         #chat-window { display: none; }
@@ -54,14 +43,14 @@
                 <img src="img/Logo Corporativo.png" alt="Logo Grupo Atics" class="h-10 md:h-14">
                 <div class="border-l-2 border-gray-200 pl-4">
                     <span class="block text-lg md:text-xl font-black text-atica-green uppercase tracking-tighter leading-none">GRUPO ATICS</span>
-                    <span class="text-[7px] md:text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] md:tracking-[0.3em]">Datos que impulsan decisiones</span>
+                    <span class="text-[7px] md:text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em]">Datos que impulsan decisiones</span>
                 </div>
             </div>
             <nav class="hidden lg:flex items-center space-x-6 text-[10px] font-bold uppercase text-gray-600">
                 <a href="#inicio" class="hover:text-green-700">Inicio</a>
                 <a href="#quienes" class="hover:text-green-700">Nosotros</a>
-                <a href="#equipo" class="hover:text-green-700">Equipo</a>
                 <a href="#capacidades" class="hover:text-green-700">Capacidades</a>
+                <a href="#experiencia" class="hover:text-green-700">Experiencia</a>
                 <div class="flex items-center space-x-4 border-l pl-4 border-gray-200 text-lg text-gray-700">
                     <a href="https://facebook.com/grupoatics" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://x.com/grupoatics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
@@ -76,11 +65,11 @@
         <video autoplay muted loop playsinline><source src="video/fondo-hero.mp4" type="video/mp4"></video>
         <div class="overlay-dark"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white text-center md:text-left">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Impacto <br><span class="text-green-400">Estratégico</span></h1>
-            <p class="text-xl md:text-2xl max-w-2xl mb-10 font-bold text-green-50 uppercase tracking-wide">Especialistas en levantamiento de información, estudios y analítica para decisiones estratégicas.</p>
+            <h1 class="text-5xl md:text-8xl font-black mb-6 uppercase tracking-tighter leading-none">Impacto <br><span class="text-green-400">Estratégico</span></h1>
+            <p class="text-xl md:text-2xl max-w-2xl mb-10 font-bold text-green-50 uppercase tracking-wide">Expertos en levantamiento de información, diseño muestral y analítica avanzada.</p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                <a href="#capacidades" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white">Ver Capacidades</a>
-                <a href="#contacto" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white">Solicitar Asesoría</a>
+                <a href="#capacidades" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white">Capacidades</a>
+                <a href="#experiencia" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white">Nuestra Experiencia</a>
             </div>
         </div>
     </section>
@@ -96,7 +85,7 @@
             <div>
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Sobre Nosotros</h2>
                 <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Transformamos información en poder estratégico.</h3>
-                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando IA para el diseño muestral y aplicativos de captura de datos a medida.</p>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8"><b>GRUPO ATICS SAS</b> nace de la unión de expertos con más de 20 años de trayectoria liderando proyectos sociales y corporativos de alta envergadura a nivel nacional.</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[10px] font-bold text-gray-400 uppercase">
                     <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento cualitativo</div>
                     <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Análisis Cuantitativo</div>
@@ -105,73 +94,166 @@
         </div>
     </section>
 
-    <section class="py-20 bg-atica-green text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-center text-2xl md:text-3xl font-black uppercase mb-16 tracking-tight">Resultados que respaldan nuestra experiencia</h2>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-                <div>
-                    <p class="text-5xl font-black mb-2">+120</p>
-                    <p class="text-xs font-bold uppercase tracking-widest text-green-400">Proyectos Ejecutados</p>
+    <section id="capacidades" class="py-24 px-6 bg-gray-50 overflow-hidden border-y">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center md:text-left">
+                <p class="text-green-600 font-bold uppercase text-[10px] tracking-[0.3em] mb-2 italic">Acompañamos todo el ciclo de información: desde la captura hasta la decisión</p>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 underline decoration-green-500 decoration-4 underline-offset-8 inline-block">Nuestras Capacidades</h2>
+                <h3 class="text-4xl font-black text-gray-900 uppercase mt-2">Soluciones de Extremo a Extremo</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
+                <div class="capability-card group" onclick="location.href='#exp-muestreo'">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video>
+                            <div class="sector-overlay"></div>
+                            <div class="absolute bottom-8 left-6 z-10 text-white">
+                                <i class="fa-solid fa-layer-group text-4xl mb-4 text-green-400"></i>
+                                <h4 class="text-lg font-bold uppercase leading-tight">Diseño <br>Muestral</h4>
+                            </div>
+                        </div>
+                        <div class="card-back text-center">
+                            <h4 class="text-sm font-black uppercase mb-2 text-green-400">Diseño Muestral</h4>
+                            <p class="text-[11px] mb-4">Garantizamos representatividad estadística mediante diseños probabilísticos y multietápicos complejos.</p>
+                            <span class="text-[10px] font-bold text-green-300">CONOCER MÁS →</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="text-5xl font-black mb-2">+50</p>
-                    <p class="text-xs font-bold uppercase tracking-widest text-green-400">Clientes Asesorados</p>
+                <div class="capability-card group" onclick="location.href='#exp-campo'">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video>
+                            <div class="sector-overlay"></div>
+                            <div class="absolute bottom-8 left-6 z-10 text-white">
+                                <i class="fa-solid fa-map-location-dot text-4xl mb-4 text-green-400"></i>
+                                <h4 class="text-lg font-bold uppercase leading-tight">Captura <br>en Campo</h4>
+                            </div>
+                        </div>
+                        <div class="card-back text-center">
+                            <h4 class="text-sm font-black uppercase mb-2 text-green-400">Captura en Campo</h4>
+                            <p class="text-[11px] mb-4">Recolección nacional online/offline con georreferenciación y control de calidad en tiempo real.</p>
+                            <span class="text-[10px] font-bold text-green-300">CONOCER MÁS →</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="text-5xl font-black mb-2">32</p>
-                    <p class="text-xs font-bold uppercase tracking-widest text-green-400">Departamentos Cobertura</p>
+                <div class="capability-card group" onclick="location.href='#exp-cuali'">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video>
+                            <div class="sector-overlay"></div>
+                            <div class="absolute bottom-8 left-6 z-10 text-white">
+                                <i class="fa-solid fa-users-viewfinder text-4xl mb-4 text-green-400"></i>
+                                <h4 class="text-lg font-bold uppercase leading-tight">Focus Group <br>& Cualitativos</h4>
+                            </div>
+                        </div>
+                        <div class="card-back text-center">
+                            <h4 class="text-sm font-black uppercase mb-2 text-green-400">Estudios Cualitativos</h4>
+                            <p class="text-[11px] mb-4">Moderación experta y análisis de discurso para entender el factor humano detrás de la data.</p>
+                            <span class="text-[10px] font-bold text-green-300">CONOCER MÁS →</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="text-5xl font-black mb-2">24/7</p>
-                    <p class="text-xs font-bold uppercase tracking-widest text-green-400">Control en Tiempo Real</p>
+                <div class="capability-card group" onclick="location.href='#exp-analitica'">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video>
+                            <div class="sector-overlay"></div>
+                            <div class="absolute bottom-8 left-6 z-10 text-white">
+                                <i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i>
+                                <h4 class="text-lg font-bold uppercase leading-tight">Analítica <br>& IA</h4>
+                            </div>
+                        </div>
+                        <div class="card-back text-center">
+                            <h4 class="text-sm font-black uppercase mb-2 text-green-400">Predictivo & IA</h4>
+                            <p class="text-[11px] mb-4">Machine Learning para identificar patrones, riesgos y oportunidades de optimización operativa.</p>
+                            <span class="text-[10px] font-bold text-green-300">CONOCER MÁS →</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="capability-card group" onclick="location.href='#exp-bi'">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video>
+                            <div class="sector-overlay"></div>
+                            <div class="absolute bottom-8 left-6 z-10 text-white">
+                                <i class="fa-solid fa-chart-pie text-4xl mb-4 text-green-400"></i>
+                                <h4 class="text-lg font-bold uppercase leading-tight">Dashboards <br>& BI</h4>
+                            </div>
+                        </div>
+                        <div class="card-back text-center">
+                            <h4 class="text-sm font-black uppercase mb-2 text-green-400">Dashboard BI</h4>
+                            <p class="text-[11px] mb-4">Tableros de control interactivos (Power BI/Tableau) para decisiones basadas en evidencia.</p>
+                            <span class="text-[10px] font-bold text-green-300">CONOCER MÁS →</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="equipo" class="py-32 bg-gray-50 px-6 border-b">
+    <section id="experiencia" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Trayectoria del Equipo</h2>
+                <h3 class="text-4xl font-black text-gray-900 uppercase">Respaldo Técnico de Alto Impacto</h3>
+                <p class="max-w-3xl mx-auto mt-6 text-gray-600">Nuestra firma consolida más de dos décadas de liderazgo en proyectos sociales y operativos complejos en Colombia.</p>
+            </div>
+
+            <div class="space-y-12">
+                <div id="exp-muestreo" class="grid md:grid-cols-3 gap-10 items-center p-8 rounded-3xl bg-gray-50 border-l-8 border-green-600 shadow-sm">
+                    <div class="md:col-span-1 text-center">
+                        <i class="fa-solid fa-layer-group text-6xl text-atica-green opacity-20"></i>
+                        <h4 class="text-xl font-black uppercase mt-4">Diseño Muestral</h4>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700 leading-relaxed italic">"Expertos en la definición de marcos muestrales para encuestas de gran escala, asegurando que cada dato recolectado sea estadísticamente sólido y representativo del universo objetivo."</p>
+                    </div>
+                </div>
+
+                <div id="exp-campo" class="grid md:grid-cols-3 gap-10 items-center p-8 rounded-3xl bg-gray-50 border-l-8 border-atica-green shadow-sm">
+                    <div class="md:col-span-1 text-center">
+                        <i class="fa-solid fa-truck-fast text-6xl text-atica-green opacity-20"></i>
+                        <h4 class="text-xl font-black uppercase mt-4">Operación Nacional</h4>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700 leading-relaxed italic">"Capacidad comprobada en el armado de equipos de campo masivos y diseño de formularios inteligentes. Hemos liderado procesos de recolección urbana y rural con supervisión digital en tiempo real."</p>
+                    </div>
+                </div>
+
+                <div id="exp-analitica" class="grid md:grid-cols-3 gap-10 items-center p-8 rounded-3xl bg-gray-50 border-l-8 border-green-400 shadow-sm">
+                    <div class="md:col-span-1 text-center">
+                        <i class="fa-solid fa-gears text-6xl text-atica-green opacity-20"></i>
+                        <h4 class="text-xl font-black uppercase mt-4">Arquitectura de Datos</h4>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-700 leading-relaxed italic">"Liderazgo en el procesamiento de información social de alta envergadura, desde la limpieza de bases de datos masivas hasta el análisis multivariado para la generación de política pública."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="py-32 bg-gray-50 px-6">
         <div class="max-w-7xl mx-auto text-center mb-20">
-            <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Liderazgo</h2>
-            <h3 class="text-4xl font-black text-gray-900 uppercase">Nuestro Equipo Directivo</h3>
+            <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Directiva</h2>
+            <h3 class="text-4xl font-black text-gray-900 uppercase">Liderazgo Estratégico</h3>
         </div>
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center">
             <div class="group cursor-pointer">
                 <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white"><img src="img/Eliana Acevedo.png" class="img-team" alt="Eliana Acevedo"></div>
                 <h4 class="font-bold text-xl uppercase">Eliana Yaneth Acevedo</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mt-2">Gerente General</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Gerente General</p>
             </div>
             <div class="group cursor-pointer">
                 <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white"><img src="img/Juan Jose.png" class="img-team" alt="Juan Jose"></div>
                 <h4 class="font-bold text-xl uppercase">Juan José Rubio</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mt-2">Director Estratégico</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2">Director Estratégico</p>
             </div>
             <div class="group cursor-pointer">
                 <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white"><img src="img/Luis Bohorquez.png" class="img-team" alt="Luis Bohorquez"></div>
                 <h4 class="font-bold text-xl uppercase">Luis Gabriel Bohórquez</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mt-2">Director de Analítica</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="capacidades" class="py-24 px-6 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16 text-center md:text-left">
-                <p class="text-green-600 font-bold uppercase text-[10px] tracking-[0.3em] mb-2 italic">Acompañamos todo el ciclo de información: desde la captura hasta la decisión</p>
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 underline decoration-green-500 decoration-4 underline-offset-8 inline-block">Nuestras Capacidades</h2>
-                <h3 class="text-4xl font-black text-gray-900 uppercase mt-2">Inteligencia de Datos de Extremo a Extremo</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-8 z-10 text-white"><i class="fa-solid fa-map-location-dot text-4xl mb-4"></i><h4 class="text-xl font-bold uppercase leading-tight">Captura de <br>Inf. en Campo</h4></div></div><div class="card-back"><h4 class="text-lg font-black mb-2 text-green-400 uppercase">Recolección Nacional</h4><p class="text-[12px] mb-4">Operativos en múltiples ciudades con control de calidad en tiempo real y georreferenciación.</p><span class="text-[10px] font-bold uppercase tracking-widest text-green-300">Conocer más →</span></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-8 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-4xl mb-4"></i><h4 class="text-xl font-bold uppercase leading-tight">Focus Group & <br>Estudios Cual.</h4></div></div><div class="card-back"><h4 class="text-lg font-black mb-2 text-green-400 uppercase">Análisis Humano</h4><p class="text-[12px] mb-4">Diseño y ejecución de grupos focales para entender las motivaciones humanas detrás de los números.</p><span class="text-[10px] font-bold uppercase tracking-widest text-green-300">Conocer más →</span></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-8 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4"></i><h4 class="text-xl font-bold uppercase leading-tight">Procesamiento & <br>Analítica (IA)</h4></div></div><div class="card-back"><h4 class="text-lg font-black mb-2 text-green-400 uppercase">Predictivo & IA</h4><p class="text-[12px] mb-4">Modelamiento de datos mediante Machine Learning para identificar patrones y riesgos estratégicos.</p><span class="text-[10px] font-bold uppercase tracking-widest text-green-300">Conocer más →</span></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-8 z-10 text-white"><i class="fa-solid fa-chart-pie text-4xl mb-4"></i><h4 class="text-xl font-bold uppercase leading-tight">Visualización & <br>Decisiones (BI)</h4></div></div><div class="card-back"><h4 class="text-lg font-black mb-2 text-green-400 uppercase">Dashboard BI</h4><p class="text-[12px] mb-4">Tableros interactivos que permiten a la alta gerencia tomar decisiones basadas en evidencia real.</p><span class="text-[10px] font-bold uppercase tracking-widest text-green-300">Conocer más →</span></div></div></div>
-            </div>
-            
-            <div class="bg-gray-50 p-10 rounded-2xl border border-dashed border-atica-green text-center">
-                <h4 class="text-xl font-black text-atica-green uppercase mb-2">¿Necesita levantar información o analizar datos?</h4>
-                <p class="text-gray-600 mb-6 font-light">Diseñemos una solución a la medida de sus objetivos estratégicos.</p>
-                <a href="#contacto" class="inline-block bg-atica-green text-white px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest hover:bg-green-800 transition shadow-xl">Contactar ahora</a>
+                <p class="text-atica-green font-bold text-[10px] uppercase tracking-widest mt-2 text-center">Director de Analítica</p>
             </div>
         </div>
     </section>
@@ -183,40 +265,37 @@
                     <span class="block text-3xl font-black uppercase text-white tracking-tighter leading-none">GRUPO ATICS</span>
                     <span class="text-[10px] font-bold text-green-400 uppercase tracking-[0.4em] mt-1 block">Datos que impulsan decisiones</span>
                 </div>
-                <h2 class="text-4xl font-black mb-8 text-green-400 uppercase leading-none tracking-tighter italic">Iniciemos hoy <br>mismo su proyecto</h2>
+                <h2 class="text-4xl font-black mb-8 text-green-400 uppercase leading-none tracking-tighter">Iniciemos hoy <br>su proyecto</h2>
                 <div class="space-y-4 opacity-70 mb-10 text-sm">
                     <p><i class="fa-solid fa-location-dot mr-3 text-green-500"></i> Calle 25 # 69 51, Bogotá, Colombia</p>
                     <p><i class="fa-solid fa-phone mr-3 text-green-500"></i> +57 3239600075</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
                 </div>
-                <div class="flex space-x-6 text-3xl">
-                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-gray-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://linkedin.com/company/grupoatics" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://instagram.com/grupoatics" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                <div class="flex space-x-6 text-3xl text-white">
+                    <a href="https://facebook.com/grupoatics" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/grupoatics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/company/grupoatics" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/grupoatics" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
 
             <div id="form-container" class="bg-white p-10 rounded-xl shadow-2xl text-gray-900 relative min-h-[500px] flex flex-col justify-center">
                 <p class="text-center font-black uppercase text-atica-green mb-6 tracking-widest text-lg">Solicite una asesoría sin costo</p>
-                
                 <form id="contact-form" class="space-y-4">
-                    <input type="text" name="Nombre" required placeholder="Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none rounded-lg">
+                    <input type="text" name="Nombre" required placeholder="Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" name="Contacto" required placeholder="Persona de Contacto" class="w-full p-4 border bg-gray-50 outline-none rounded-lg">
-                        <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none rounded-lg">
+                        <input type="text" name="Contacto" required placeholder="Persona de Contacto" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
+                        <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
                     </div>
-                    <input type="email" name="Email" required placeholder="Email Corporativo" class="w-full p-4 border bg-gray-50 outline-none rounded-lg">
-                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar sus necesidades de información?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg"></textarea>
+                    <input type="email" name="Email" required placeholder="Email Corporativo" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
+                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar sus necesidades?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600"></textarea>
                     <div class="flex items-start space-x-3 py-2">
                         <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded cursor-pointer">
                         <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic">Autorizo a GRUPO ATICS SAS el tratamiento de mis datos personales.</label>
                     </div>
                     <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Mensaje</button>
-                    
-                    <p class="text-center text-[10px] font-bold text-gray-400 mt-4 uppercase tracking-widest">Nuestro equipo le responderá en menos de 24 horas.</p>
+                    <p class="text-center text-[10px] font-bold text-gray-400 mt-4 uppercase">Le responderemos en menos de 24 horas.</p>
                 </form>
-                
                 <div id="success-message" class="hidden text-center fade-in">
                     <div class="mb-6"><i class="fa-solid fa-circle-check text-6xl text-green-600"></i></div>
                     <h4 class="text-2xl font-black text-atica-green uppercase mb-4">¡Mensaje Recibido!</h4>
@@ -224,17 +303,17 @@
                 </div>
             </div>
         </div>
-        <p class="mt-20 text-center text-[10px] opacity-40 border-t border-white/10 pt-10">&copy; 2026 GRUPO ATICS SAS | Bogotá DC, Colombia</p>
+        <p class="mt-20 text-center text-[10px] opacity-40 border-t border-white/10 pt-10">&copy; 2026 GRUPO ATICS SAS | Bogotá DC</p>
     </footer>
 
     <div id="chatbot" class="fixed bottom-8 right-8 z-[100]">
         <div id="chat-window" class="flex-col w-80 h-[450px] bg-white shadow-2xl rounded-3xl mb-4 border overflow-hidden">
             <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center">
-                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest">Consultoría Online</span></div>
+                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest">WhatsApp Atics</span></div>
                 <button onclick="toggleChat()" class="text-2xl leading-none">&times;</button>
             </div>
             <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
-                <div class="bg-white p-4 rounded-2xl shadow-sm">Hola. Bienvenido a <b>Grupo Atics</b>. Escriba su consulta y le atenderemos pronto.</div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm">Bienvenido a <b>Grupo Atics</b>. ¿En qué podemos asesorarle hoy?</div>
             </div>
             <div class="p-4 border-t bg-white flex space-x-2">
                 <input type="text" id="wa-message" placeholder="Escriba aquí..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
@@ -253,9 +332,7 @@
         form.addEventListener("submit", e => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
-            btn.innerText = "Registrando...";
-            btn.disabled = true;
-
+            btn.innerText = "Registrando..."; btn.disabled = true;
             const formData = new FormData(form);
             const hoy = new Date();
             const fechaFormateada = hoy.toLocaleDateString() + " " + hoy.toLocaleTimeString();
@@ -265,12 +342,9 @@
             .then(response => {
                 if (response.ok) {
                     fetch('https://formspree.io/f/xreooawy', { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
-                    form.style.display = 'none';
-                    successMessage.classList.remove('hidden');
+                    form.style.display = 'none'; successMessage.classList.remove('hidden');
                 } else {
-                    alert("Error en el envío.");
-                    btn.disabled = false;
-                    btn.innerText = "Enviar Mensaje";
+                    alert("Error en el envío."); btn.disabled = false; btn.innerText = "Enviar Mensaje";
                 }
             });
         });
