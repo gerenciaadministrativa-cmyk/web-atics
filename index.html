@@ -278,13 +278,20 @@
             btn.innerText = "Enviando...";
             btn.disabled = true;
 
+// Capturamos los datos del formulario
             const formData = new FormData(form);
+            
+            // AGREGAMOS LA FECHA ACTUAL AUTOMÁTICAMENTE
+            const hoy = new Date();
+            const fechaFormateada = hoy.toLocaleDateString() + " " + hoy.toLocaleTimeString();
+            formData.append("Fecha", fechaFormateada);
 
-            // 1. ENVIAR A GOOGLE SHEETS (PEGA TU LINK DE API ABAJO)
+            // 1. ENVIAR A GOOGLE SHEETS (TU API DE SHEETDB)
             fetch('https://sheetdb.io/api/v1/25atkoavt2aiy', { 
                 method: 'POST',
                 body: formData
             })
+
             .then(response => {
                 if (response.ok) {
                     // 2. ENVIAR AL CORREO (FORMSPREE)
