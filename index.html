@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRUPO ATICS | Consultoría en Inteligencia de Datos</title>
+    <title>GRUPO ATICS | Consultoría Técnica y Soluciones de Información</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -12,25 +12,14 @@
         h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
         .bg-atica-green { background-color: #14532d; }
         .text-atica-green { color: #14532d; }
-        
         .img-team { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .group:hover .img-team { transform: scale(1.05); }
 
-        .hero-video-container {
-            position: relative; height: 85vh; width: 100%; overflow: hidden;
-            background-color: #0a2412;
-        }
-        .hero-video-container video {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0;
-        }
-        .overlay-dark {
-            position: absolute; inset: 0;
-            background: linear-gradient(90deg, rgba(20, 83, 45, 0.9) 0%, rgba(20, 83, 45, 0.3) 100%);
-            z-index: 1;
-        }
+        .hero-video-container { position: relative; height: 85vh; width: 100%; overflow: hidden; background-color: #0a2412; }
+        .hero-video-container video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0; }
+        .overlay-dark { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 83, 45, 0.9) 0%, rgba(20, 83, 45, 0.3) 100%); z-index: 1; }
 
-        /* --- TARJETAS DINÁMICAS --- */
+        /* TARJETAS DINÁMICAS */
         .capability-card { position: relative; height: 420px; perspective: 1000px; cursor: pointer; }
         .card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; }
         .capability-card:hover .card-inner { transform: rotateY(180deg); }
@@ -76,11 +65,11 @@
         <video autoplay muted loop playsinline><source src="video/fondo-hero.mp4" type="video/mp4"></video>
         <div class="overlay-dark"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white text-center md:text-left">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Impacto <br><span class="text-green-400">Estratégico</span></h1>
-            <p class="text-xl md:text-2xl max-w-2xl mb-10 font-bold text-green-50 uppercase tracking-wide">Especialistas en estudios, levantamiento de información y analítica para decisiones estratégicas.</p>
+            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Consultoría <br><span class="text-green-400">Estratégica</span></h1>
+            <p class="text-xl md:text-2xl max-w-3xl mb-10 font-bold text-green-50 uppercase tracking-wide">Expertos en levantamiento de información, diseño metodológico y análisis de alto impacto para la toma de decisiones.</p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                <a href="#capacidades" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white">Ver Capacidades</a>
-                <a href="#contacto" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white">Solicitar Asesoría</a>
+                <a href="#capacidades" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white">Nuestras Soluciones</a>
+                <a href="#quienes" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white">Conózcanos</a>
             </div>
         </div>
     </section>
@@ -90,16 +79,18 @@
             <div class="relative">
                 <img src="img/nosotros.png" class="rounded-3xl shadow-2xl relative z-10" alt="Consultoría Atics">
                 <div class="absolute -bottom-8 -right-8 bg-atica-green p-10 rounded-2xl text-white hidden md:block text-center shadow-2xl z-20">
-                    <p class="text-5xl font-black leading-none">AI</p><p class="text-[9px] font-bold uppercase tracking-[0.2em]">Tecnología Nativa</p>
+                    <p class="text-5xl font-black leading-none">+20</p><p class="text-[9px] font-bold uppercase tracking-[0.2em]">Años de Experiencia</p>
                 </div>
             </div>
             <div>
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Sobre Nosotros</h2>
-                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Transformamos información en poder estratégico.</h3>
-                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>GRUPO ATICS SAS</b>, convertimos la complejidad estadística en claridad operativa utilizando IA para el diseño muestral y aplicativos de captura de datos a medida. Nuestra firma consolida la experiencia senior de más de 20 años de sus socios fundadores.</p>
+                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Rigurosidad técnica para realidades complejas.</h3>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                    En <b>GRUPO ATICS SAS</b>, combinamos la experiencia senior en investigación social y de mercados con herramientas tecnológicas de vanguardia. Nos especializamos en capturar la realidad del territorio y transformarla en conocimiento accionable mediante procesos certificados de control de calidad y análisis estadístico profundo.
+                </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[10px] font-bold text-gray-400 uppercase">
-                    <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Levantamiento cualitativo</div>
-                    <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Análisis Cuantitativo</div>
+                    <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Operación Territorial Nacional</div>
+                    <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Rigor Metodológico</div>
                 </div>
             </div>
         </div>
@@ -107,12 +98,12 @@
 
     <section class="py-20 bg-atica-green text-white">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-center text-2xl md:text-3xl font-black uppercase mb-16 tracking-tight">Resultados que respaldan nuestra experiencia</h2>
+            <h2 class="text-center text-2xl md:text-3xl font-black uppercase mb-16 tracking-tight">Cifras que respaldan nuestro liderazgo</h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                 <div><p class="text-5xl font-black mb-2">+120</p><p class="text-xs font-bold uppercase text-green-400">Proyectos Ejecutados</p></div>
                 <div><p class="text-5xl font-black mb-2">+50</p><p class="text-xs font-bold uppercase text-green-400">Clientes Asesorados</p></div>
-                <div><p class="text-5xl font-black mb-2">32</p><p class="text-xs font-bold uppercase text-green-400">Departamentos Cobertura</p></div>
-                <div><p class="text-5xl font-black mb-2">24/7</p><p class="text-xs font-bold uppercase text-green-400">Control en Tiempo Real</p></div>
+                <div><p class="text-5xl font-black mb-2">32</p><p class="text-xs font-bold uppercase text-green-400">Deptos. de Cobertura</p></div>
+                <div><p class="text-5xl font-black mb-2">100%</p><p class="text-xs font-bold uppercase text-green-400">Veracidad del Dato</p></div>
             </div>
         </div>
     </section>
@@ -121,6 +112,7 @@
         <div class="max-w-7xl mx-auto text-center mb-20">
             <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Liderazgo</h2>
             <h3 class="text-4xl font-black text-gray-900 uppercase">Nuestro Equipo Directivo</h3>
+            <p class="max-w-2xl mx-auto mt-4 text-gray-500">Profesionales con trayectoria comprobada en la dirección de grandes estudios sociales y económicos.</p>
         </div>
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center">
             <div class="group cursor-pointer">
@@ -144,22 +136,22 @@
     <section id="capacidades" class="py-24 px-6 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 text-center md:text-left">
-                <p class="text-green-600 font-bold uppercase text-[10px] tracking-[0.3em] mb-2 italic">Acompañamos todo el ciclo de información: desde la captura hasta la toma de decisiones.</p>
+                <p class="text-green-600 font-bold uppercase text-[10px] tracking-[0.3em] mb-2 italic">Acompañamos todo el ciclo de información: desde la captura hasta la decisión</p>
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 underline decoration-green-500 decoration-4 underline-offset-8 inline-block">Nuestras Capacidades</h2>
-                <h3 class="text-4xl font-black text-gray-900 uppercase mt-2">Inteligencia de Datos de Extremo a Extremo</h3>
+                <h3 class="text-4xl font-black text-gray-900 uppercase mt-2">Soluciones Técnicas Integrales</h3>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed">Estructuración técnica de marcos muestrales, asegurando representatividad y precisión absoluta.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Captura de <br>Inf. en Campo</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Cobertura Nacional</h4><p class="text-[11px] leading-relaxed">Operativos nacionales online/offline con control de calidad y georreferenciación en tiempo real.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Focus Group & <br>Estudios Cual.</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Análisis Humano</h4><p class="text-[11px] leading-relaxed">Entendemos el factor humano detrás de la data mediante técnicas cualitativas avanzadas.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Procesamiento & <br>Analítica (IA)</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Predictivo & IA</h4><p class="text-[11px] leading-relaxed">Modelamiento mediante Machine Learning para identificar patrones y riesgos estratégicos.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Dashboards & <br>Decisiones (BI)</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Dashboard BI</h4><p class="text-[11px] leading-relaxed">Tableros interactivos intuitivos que impulsan decisiones basadas en evidencia real.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed">Estructuración técnica de marcos muestrales bajo estándares científicos, garantizando precisión y representatividad absoluta.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Captura de <br>Inf. en Campo</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Presencia Territorial</h4><p class="text-[11px] leading-relaxed">Recolección nacional mediante operativos técnicos robustos, supervisados digitalmente en tiempo real para asegurar la calidad del dato.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Estudios <br>Cualitativos</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Comprensión Social</h4><p class="text-[11px] leading-relaxed">Moderación experta y técnicas de investigación cualitativa para descifrar percepciones, discursos y comportamientos humanos.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Análisis & <br>Procesamiento</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Potencia Analítica</h4><p class="text-[11px] leading-relaxed">Tratamiento avanzado de datos potenciado con IA para detectar patrones complejos y generar modelos predictivos de alta confiabilidad.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Decisiones <br>& BI</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Control Estratégico</h4><p class="text-[11px] leading-relaxed">Visualización de información estratégica en tableros interactivos para una gestión gerencial basada en evidencia objetiva.</p></div></div></div>
             </div>
             
             <div class="bg-gray-50 p-10 rounded-2xl border border-dashed border-atica-green text-center">
-                <h4 class="text-xl font-black text-atica-green uppercase mb-2">¿Necesita levantar información o analizar datos?</h4>
-                <p class="text-gray-600 mb-6 font-light">Diseñemos una solución a la medida de sus objetivos estratégicos.</p>
+                <h4 class="text-xl font-black text-atica-green uppercase mb-2">¿Busca transformar información en decisiones?</h4>
+                <p class="text-gray-600 mb-6 font-light">Pongamos nuestra experiencia y tecnología al servicio de su organización.</p>
                 <a href="#contacto" class="inline-block bg-atica-green text-white px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest hover:bg-green-800 transition shadow-xl">Contactar ahora</a>
             </div>
         </div>
@@ -168,23 +160,23 @@
     <section id="experiencia" class="py-32 px-6 bg-gray-50 border-y">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Trayectoria del Equipo</h2>
-                <h3 class="text-4xl font-black text-gray-900 uppercase">Respaldo Técnico de Alto Impacto</h3>
-                <p class="max-w-3xl mx-auto mt-6 text-gray-600 italic">"Consolidamos 20 años de liderazgo en proyectos sociales y corporativos masivos en Colombia."</p>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Experiencia de Equipo</h2>
+                <h3 class="text-4xl font-black text-gray-900 uppercase">Trayectoria Consolidada</h3>
+                <p class="max-w-3xl mx-auto mt-6 text-gray-600 italic">"Respaldamos cada proyecto con el conocimiento técnico acumulado en dos décadas liderando operativos de información a gran escala en Colombia."</p>
             </div>
 
             <div class="grid gap-8">
                 <div class="bg-white p-8 rounded-3xl border-l-8 border-green-600 shadow-sm">
-                    <h4 class="text-xl font-black uppercase text-atica-green mb-4">Diseño y Estructura Muestral</h4>
-                    <p class="text-gray-700 leading-relaxed">Experiencia en la definición de marcos muestrales complejos para encuestas nacionales. Aseguramos la rigurosidad estadística necesaria para la representatividad absoluta.</p>
+                    <h4 class="text-xl font-black uppercase text-atica-green mb-4">Ingeniería Metodológica</h4>
+                    <p class="text-gray-700 leading-relaxed">Nuestra fortaleza reside en la construcción de instrumentos de captura y marcos muestrales impecables. Hemos diseñado la estructura lógica de encuestas nacionales críticas, asegurando la trazabilidad y pureza de cada registro obtenido.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl border-l-8 border-atica-green shadow-sm">
-                    <h4 class="text-xl font-black uppercase text-atica-green mb-4">Operación en Campo y Recolección Nacional</h4>
-                    <p class="text-gray-700 leading-relaxed">Liderazgo en equipos de trabajo masivos para proyectos de gran escala, con diseño de formularios inteligentes y supervisión digital en tiempo real.</p>
+                    <h4 class="text-xl font-black uppercase text-atica-green mb-4">Logística y Despliegue de Operativos</h4>
+                    <p class="text-gray-700 leading-relaxed">Experiencia probada en la gestión de equipos humanos en campo para recolección multimodal. Dominamos la logística necesaria para operativos simultáneos en zonas urbanas y rurales dispersas, integrando supervisión técnica constante.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl border-l-8 border-green-400 shadow-sm">
-                    <h4 class="text-xl font-black uppercase text-atica-green mb-4">Procesamiento y Resultados Estratégicos</h4>
-                    <p class="text-gray-700 leading-relaxed">Especialistas en convertir bases de datos masivas en reportes de alto impacto, analítica predictiva y recomendaciones accionables para la alta gerencia.</p>
+                    <h4 class="text-xl font-black uppercase text-atica-green mb-4">Resultados de Alto Nivel Consultor</h4>
+                    <p class="text-gray-700 leading-relaxed">Especialistas en la entrega de resultados que trascienden el reporte básico. Generamos análisis de valor estratégicos para organismos públicos y privados, facilitando el diseño de políticas y estrategias corporativas basadas en datos reales.</p>
                 </div>
             </div>
         </div>
@@ -194,7 +186,7 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
                 <div class="mb-10 border-l-4 border-green-500 pl-5">
-                    <span class="block text-3xl font-black uppercase text-white tracking-tighter leading-none">GRUPO ATICS</span>
+                    <span class="block text-3xl font-black uppercase text-white tracking-tighter">GRUPO ATICS</span>
                     <span class="text-[10px] font-bold text-green-400 uppercase tracking-[0.4em] mt-1 block">Datos que impulsan decisiones</span>
                 </div>
                 <h2 class="text-4xl font-black mb-8 text-green-400 uppercase leading-none tracking-tighter italic">Iniciemos hoy <br>mismo su proyecto</h2>
@@ -206,7 +198,7 @@
             </div>
 
             <div id="form-container" class="bg-white p-10 rounded-xl shadow-2xl text-gray-900 relative min-h-[500px] flex flex-col justify-center">
-                <p class="text-center font-black uppercase text-atica-green mb-6 tracking-widest text-lg">Solicite una asesoría sin costo</p>
+                <p class="text-center font-black uppercase text-atica-green mb-6 tracking-widest text-lg">Solicite una asesoría especializada</p>
                 <form id="contact-form" class="space-y-4">
                     <input type="text" name="Nombre" required placeholder="Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -214,45 +206,24 @@
                         <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
                     </div>
                     <input type="email" name="Email" required placeholder="Email Corporativo" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
-                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar sus necesidades?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600"></textarea>
+                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar su necesidad de información?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600"></textarea>
                     <div class="flex items-start space-x-3 py-2">
                         <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded cursor-pointer">
                         <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic">Autorizo a GRUPO ATICS SAS el tratamiento de mis datos personales.</label>
                     </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Solicitar asesoría</button>
-                    <p class="text-center text-[10px] font-bold text-gray-400 mt-4 uppercase">Le responderemos en menos de 24 horas hábiles</p>
+                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Solicitud</button>
                 </form>
                 <div id="success-message" class="hidden text-center fade-in">
                     <div class="mb-6"><i class="fa-solid fa-circle-check text-6xl text-green-600"></i></div>
-                    <h4 class="text-2xl font-black text-atica-green uppercase mb-4">¡Mensaje Recibido!</h4>
-                    <p class="text-gray-600 leading-relaxed">Un consultor experto se comunicará con usted en la brevedad posible.</p>
+                    <h4 class="text-2xl font-black text-atica-green uppercase mb-4">Solicitud Recibida</h4>
+                    <p class="text-gray-600">Un consultor experto se comunicará con usted en la brevedad posible.</p>
                 </div>
             </div>
         </div>
         <p class="mt-20 text-center text-[10px] opacity-40 border-t border-white/10 pt-10">&copy; 2026 GRUPO ATICS SAS | Bogotá DC</p>
     </footer>
 
-    <div id="chatbot" class="fixed bottom-8 right-8 z-[100]">
-        <div id="chat-window" class="flex-col w-80 h-[450px] bg-white shadow-2xl rounded-3xl mb-4 border border-gray-100 overflow-hidden">
-            <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center">
-                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest">WhatsApp Atics</span></div>
-                <button onclick="toggleChat()" class="text-2xl leading-none">&times;</button>
-            </div>
-            <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
-                <div class="bg-white p-4 rounded-2xl shadow-sm">Bienvenido a <b>Grupo Atics</b>. ¿En qué podemos asesorarle hoy?</div>
-            </div>
-            <div class="p-4 border-t bg-white flex space-x-2">
-                <input type="text" id="wa-message" placeholder="Escriba aquí..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
-                <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
-        </div>
-        <button onclick="toggleChat()" class="bg-[#25D366] w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl text-white shadow-green-900/40">
-            <i class="fa-brands fa-whatsapp"></i>
-        </button>
-    </div>
-
     <script>
-        // SOLUCIÓN AL PUNTO 2: Forzar inicio al cargar o refrescar
         window.onbeforeunload = function () { window.scrollTo(0, 0); };
         if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
         window.scrollTo(0, 0);
@@ -263,11 +234,10 @@
         form.addEventListener("submit", e => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
-            btn.innerText = "Registrando..."; btn.disabled = true;
+            btn.innerText = "Enviando..."; btn.disabled = true;
             const formData = new FormData(form);
             const hoy = new Date();
-            const fechaFormateada = hoy.toLocaleDateString() + " " + hoy.toLocaleTimeString();
-            formData.append("Fecha", fechaFormateada);
+            formData.append("Fecha", hoy.toLocaleDateString() + " " + hoy.toLocaleTimeString());
 
             fetch('https://sheetdb.io/api/v1/25atkoavt2aiy', { method: 'POST', body: formData })
             .then(response => {
@@ -275,7 +245,7 @@
                     fetch('https://formspree.io/f/xreooawy', { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
                     form.style.display = 'none'; successMessage.classList.remove('hidden');
                 } else {
-                    alert("Error en el envío."); btn.disabled = false; btn.innerText = "Solicitar asesoría";
+                    alert("Error."); btn.disabled = false; btn.innerText = "Enviar";
                 }
             });
         });
