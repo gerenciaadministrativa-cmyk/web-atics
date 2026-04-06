@@ -219,7 +219,7 @@
                         <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded cursor-pointer">
                         <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic">Autorizo a GRUPO ATICS SAS el tratamiento de mis datos personales.</label>
                     </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Mensaje</button>
+                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Solicitar asesoría</button>
                     <p class="text-center text-[10px] font-bold text-gray-400 mt-4 uppercase">Le responderemos en menos de 24 horas hábiles</p>
                 </form>
                 <div id="success-message" class="hidden text-center fade-in">
@@ -275,7 +275,7 @@
                     fetch('https://formspree.io/f/xreooawy', { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
                     form.style.display = 'none'; successMessage.classList.remove('hidden');
                 } else {
-                    alert("Error en el envío."); btn.disabled = false; btn.innerText = "Enviar Mensaje";
+                    alert("Error en el envío."); btn.disabled = false; btn.innerText = "Solicitar asesoría";
                 }
             });
         });
