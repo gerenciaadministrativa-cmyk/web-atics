@@ -19,7 +19,7 @@
         .hero-video-container video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0; }
         .overlay-dark { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 83, 45, 0.9) 0%, rgba(20, 83, 45, 0.3) 100%); z-index: 1; }
 
-        /* TARJETAS DINÁMICAS CAPACIDADES */
+        /* TARJETAS CAPACIDADES */
         .capability-card { position: relative; height: 400px; perspective: 1000px; cursor: pointer; }
         .card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; }
         .capability-card:hover .card-inner { transform: rotateY(180deg); }
@@ -32,11 +32,15 @@
         .linea-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; height: 100%; }
         .linea-card:hover { transform: translateY(-5px); border-color: #14532d; box-shadow: 0 10px 30px -10px rgba(20, 83, 45, 0.2); }
 
-        /* CHATBOT WHATSAPP */
+        /* ACORDEÓN FAQ */
+        .faq-item { border-bottom: 1px solid #e2e8f0; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-content { max-height: 200px; padding-bottom: 1rem; }
+        .faq-item.active i { transform: rotate(180deg); }
+
         #chat-window { display: none; }
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease forwards; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        
         .fade-in { animation: fadeIn 0.5s ease forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { transform: translateY(0); opacity: 1; } }
     </style>
@@ -92,19 +96,68 @@
             <div>
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Sobre Nosotros</h2>
                 <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Rigurosidad técnica para realidades complejas.</h3>
-                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>GRUPO ATICS SAS</b>, combinamos experiencia senior con tecnología de vanguardia. Nos especializamos en capturar la realidad del territorio y transformarla en conocimiento accionable.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[10px] font-bold text-gray-400 uppercase">
-                    <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Operación Territorial Nacional</div>
-                    <div class="p-4 border border-gray-200 flex items-center bg-gray-50 rounded-lg shadow-sm"><i class="fa-solid fa-check text-green-600 mr-3"></i> Rigor Metodológico</div>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>GRUPO ATICS SAS</b>, combinamos experiencia senior con tecnología de vanguardia. Nos especializamos en capturar la realidad del territorio y transformarla en conocimiento accionable para el sector público y privado.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                    <div>
+                        <h4 class="text-atica-green font-black text-[10px] uppercase tracking-widest mb-2 border-b border-green-200 pb-1">Misión Estratégica</h4>
+                        <p class="text-[12px] text-gray-500 italic">Generar información confiable mediante metodologías rigurosas apoyadas en tecnología para facilitar decisiones estratégicas.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-atica-green font-black text-[10px] uppercase tracking-widest mb-2 border-b border-green-200 pb-1">Visión de Futuro</h4>
+                        <p class="text-[12px] text-gray-500 italic">Ser el aliado técnico referente en Colombia para el procesamiento inteligente de datos y estudios de alto nivel consultor.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="equipo" class="py-32 bg-gray-50 px-6 border-b">
+    <section class="py-24 px-6 bg-gray-50 border-y">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Dudas Técnicas</h2>
+                <h3 class="text-4xl font-black text-gray-900 uppercase">Preguntas Frecuentes</h3>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="faq-item bg-white p-6 rounded-xl cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold text-gray-800 text-sm uppercase">¿En qué ciudades tienen capacidad de operación?</h4>
+                        <i class="fa-solid fa-chevron-down text-atica-green transition"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p class="text-xs text-gray-500 mt-4 leading-relaxed">Contamos con cobertura nacional en Colombia. Hemos liderado operativos en zonas urbanas y rurales dispersas en los 32 departamentos del país.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white p-6 rounded-xl cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold text-gray-800 text-sm uppercase">¿Cómo garantizan la veracidad de los datos capturados?</h4>
+                        <i class="fa-solid fa-chevron-down text-atica-green transition"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p class="text-xs text-gray-500 mt-4 leading-relaxed">Aplicamos protocolos de control de calidad en tiempo real: supervisión digital, georreferenciación obligatoria, auditoría de encuestas y validación lógica de bases de datos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white p-6 rounded-xl cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold text-gray-800 text-sm uppercase">¿Qué metodologías de investigación utilizan?</h4>
+                        <i class="fa-solid fa-chevron-down text-atica-green transition"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p class="text-xs text-gray-500 mt-4 leading-relaxed">Implementamos métodos cuantitativos (encuestas masivas) y cualitativos (focus groups, entrevistas a profundidad), adaptando cada diseño al objetivo del estudio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="py-32 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center mb-20">
             <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Liderazgo</h2>
             <h3 class="text-4xl font-black text-gray-900 uppercase">Nuestro Equipo Directivo</h3>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto italic font-light">"Equipo interdisciplinario con experiencia senior en estudios de campo y ejecución de proyectos de gran escala."</p>
         </div>
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center">
             <div class="group cursor-pointer">
@@ -120,12 +173,12 @@
             <div class="group cursor-pointer">
                 <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-atica-green shadow-xl bg-white"><img src="img/Luis Bohorquez.png" class="img-team" alt="Luis Bohorquez"></div>
                 <h4 class="font-bold text-xl uppercase">Luis Gabriel Bohórquez</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mt-2">Director de Analítica</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase mt-2 text-center">Director de Analítica</p>
             </div>
         </div>
     </section>
 
-    <section id="capacidades" class="py-24 px-6 bg-white overflow-hidden">
+    <section id="capacidades" class="py-24 px-6 bg-gray-50 overflow-hidden border-y">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 text-center md:text-left">
                 <p class="text-green-600 font-bold uppercase text-[10px] tracking-[0.3em] mb-2 italic">Acompañamos todo el ciclo de información</p>
@@ -133,65 +186,31 @@
                 <h3 class="text-4xl font-black text-gray-900 uppercase mt-2">Soluciones Técnicas Integrales</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed">Estructuración técnica de marcos muestrales científicos para representatividad absoluta.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Captura <br>en Campo</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Presencia</h4><p class="text-[11px] leading-relaxed">Recolección nacional técnica con supervisión digital en tiempo real.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Estudios <br>Cualitativos</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Comprensión</h4><p class="text-[11px] leading-relaxed">Investigación cualitativa para descifrar comportamientos y discursos humanos.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Análisis & <br>Procesamiento</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Potencia</h4><p class="text-[11px] leading-relaxed">Tratamiento avanzado de datos potenciado con IA para detectar patrones complejos.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Decisiones <br>& BI</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Control</h4><p class="text-[11px] leading-relaxed">Visualización estratégica para una gestión basada en evidencia objetiva.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed text-center">Estructuración técnica de marcos muestrales científicos para representatividad absoluta.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Captura <br>en Campo</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Presencia</h4><p class="text-[11px] leading-relaxed text-center text-white">Recolección nacional técnica con supervisión digital en tiempo real.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Estudios <br>Cualitativos</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Comprensión</h4><p class="text-[11px] leading-relaxed text-center text-white text-white">Investigación cualitativa para descifrar comportamientos y discursos humanos.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Análisis & <br>Procesamiento</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Potencia</h4><p class="text-[11px] leading-relaxed text-center text-white">Tratamiento avanzado de datos potenciado con IA para detectar patrones complejos.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Decisiones <br>& BI</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Control</h4><p class="text-[11px] leading-relaxed text-center text-white">Visualización estratégica para una gestión basada en evidencia objetiva.</p></div></div></div>
             </div>
         </div>
     </section>
 
-    <section id="ejecucion" class="py-32 px-6 bg-gray-50 border-y">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <p class="text-atica-green font-bold text-[11px] uppercase tracking-[0.2em] mb-4">Contamos con la capacidad operativa para ejecutar estudios en diferentes metodologías y canales.</p>
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-2 opacity-60">Músculo Operativo</h2>
-                <h3 class="text-4xl font-black text-gray-900 uppercase">Líneas de Ejecución</h3>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
-                    <i class="fa-solid fa-house-chimney-user text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Recolección en Campo</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Ejecutamos operativos presenciales en hogares y puntos de atención con supervisión y control técnico en tiempo real.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
-                    <i class="fa-solid fa-phone-volume text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Telefónicas</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Implementamos capturas mediante equipos especializados, garantizando trazabilidad y calidad en cada contacto.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
-                    <i class="fa-solid fa-laptop-code text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Web</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Desarrollamos instrumentos digitales con distribución multicanal y procesos de validación automatizados.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
-                    <i class="fa-solid fa-mask text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Cliente Incógnito</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Realizamos evaluaciones de experiencia de servicio bajo metodologías de Mystery Shopping en diversos canales de atención.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
-                    <i class="fa-solid fa-box-open text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Pruebas de Producto</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Validamos productos y servicios mediante pruebas controladas con usuarios reales para medir impacto y aceptación.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
-                    <i class="fa-solid fa-user-group text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Focus Group</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Moderamos sesiones cualitativas diseñadas para profundizar en las motivaciones de compra y toma de decisiones.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
-                    <i class="fa-solid fa-database text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Procesamiento</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Procesamos y depuramos grandes volúmenes de información bajo estándares metodológicos de alta rigurosidad.</p>
-                </div>
-                <div class="linea-card bg-atica-green p-8 rounded-2xl flex flex-col justify-center text-center">
-                    <h4 class="text-white font-black uppercase text-sm mb-4">¿Requiere un operativo a medida?</h4>
-                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition shadow-lg">Contactar ahora</a>
-                </div>
-            </div>
-            <p class="text-center mt-16 text-gray-400 text-xs font-bold uppercase tracking-widest italic">Adaptamos cada metodología a las necesidades específicas de su organización.</p>
+    <section id="ejecucion" class="py-32 px-6 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center mb-20">
+            <p class="text-atica-green font-bold text-[11px] uppercase tracking-[0.2em] mb-4">Capacidad operativa multicanal</p>
+            <h3 class="text-4xl font-black text-gray-900 uppercase">Líneas de Ejecución</h3>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div class="linea-card bg-gray-50 p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-house-chimney-user text-3xl text-atica-green mb-6"></i><h4 class="font-bold text-sm uppercase mb-3">Recolección en Campo</h4><p class="text-xs text-gray-500 leading-relaxed">Ejecutamos operativos presenciales con supervisión técnica en tiempo real.</p></div>
+            <div class="linea-card bg-gray-50 p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-phone-volume text-3xl text-atica-green mb-6"></i><h4 class="font-bold text-sm uppercase mb-3">Encuestas Telefónicas</h4><p class="text-xs text-gray-500 leading-relaxed">Implementamos capturas especializadas con trazabilidad absoluta del contacto.</p></div>
+            <div class="linea-card bg-gray-50 p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-laptop-code text-3xl text-atica-green mb-6"></i><h4 class="font-bold text-sm uppercase mb-3">Encuestas Web</h4><p class="text-xs text-gray-500 leading-relaxed">Desarrollamos instrumentos digitales con procesos de validación automática.</p></div>
+            <div class="linea-card bg-gray-50 p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-mask text-3xl text-atica-green mb-6"></i><h4 class="font-bold text-sm uppercase mb-3">Cliente Incógnito</h4><p class="text-xs text-gray-500 leading-relaxed">Realizamos evaluaciones de experiencia mediante Mystery Shopping.</p></div>
+            <div class="linea-card bg-gray-50 p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-box-open text-3xl text-atica-green mb-6"></i><h4 class="font-bold text-sm uppercase mb-3">Pruebas de Producto</h4><p class="text-xs text-gray-500 leading-relaxed">Validamos aceptación y uso real de productos mediante pruebas controladas.</p></div>
+            <div class="linea-card bg-gray-50 p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-user-group text-3xl text-atica-green mb-6"></i><h4 class="font-bold text-sm uppercase mb-3">Focus Group</h4><p class="text-xs text-gray-500 leading-relaxed">Moderamos sesiones cualitativas para profundizar en la toma de decisiones.</p></div>
+            <div class="linea-card bg-gray-50 p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-database text-3xl text-atica-green mb-6"></i><h4 class="font-bold text-sm uppercase mb-3">Procesamiento</h4><p class="text-xs text-gray-500 leading-relaxed">Depuramos grandes volúmenes de datos bajo estándares de alta rigurosidad.</p></div>
+            <div class="linea-card bg-atica-green p-8 rounded-2xl flex flex-col justify-center text-center"><h4 class="text-white font-black uppercase text-sm mb-4">¿Requiere un diseño a medida?</h4><a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition shadow-lg">Contáctenos</a></div>
+        </div>
+        <p class="text-center mt-16 text-gray-400 text-xs font-bold uppercase tracking-widest italic">Adaptamos cada metodología a las necesidades específicas de su organización.</p>
     </section>
 
     <footer id="contacto" class="bg-gray-900 text-white py-24 px-6 border-t-8 border-atica-green">
@@ -207,17 +226,11 @@
                     <p><i class="fa-solid fa-phone mr-3 text-green-500"></i> +57 3239600075</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
                 </div>
-                <div class="flex space-x-6 text-3xl">
-                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-gray-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://linkedin.com/company/grupoatics" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://instagram.com/grupoatics" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
-                </div>
             </div>
 
             <div id="form-container" class="bg-white p-10 rounded-xl shadow-2xl text-gray-900 relative min-h-[500px] flex flex-col justify-center">
-                <p class="text-center font-black uppercase text-atica-green mb-6 tracking-widest text-lg">Solicite una asesoría especializada</p>
-                <form id="contact-form" class="space-y-4">
+                <p class="text-center font-black uppercase text-atica-green mb-6 tracking-widest text-lg text-atica-green">Solicite una asesoría especializada</p>
+                <form id="contact-form" class="space-y-4 text-gray-900">
                     <input type="text" name="Nombre" required placeholder="Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input type="text" name="Contacto" required placeholder="Persona de Contacto" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
@@ -233,9 +246,9 @@
                     <p class="text-center text-[10px] font-bold text-gray-400 mt-4 uppercase tracking-widest">Le responderemos en menos de 24 horas.</p>
                 </form>
                 <div id="success-message" class="hidden text-center fade-in">
-                    <div class="mb-6"><i class="fa-solid fa-circle-check text-6xl text-green-600"></i></div>
-                    <h4 class="text-2xl font-black text-atica-green uppercase mb-4">Solicitud Recibida</h4>
-                    <p class="text-gray-600">Un consultor experto se comunicará con usted en la brevedad posible.</p>
+                    <div class="mb-6 text-gray-900"><i class="fa-solid fa-circle-check text-6xl text-green-600"></i></div>
+                    <h4 class="text-2xl font-black text-atica-green uppercase mb-4 text-gray-900">Solicitud Recibida</h4>
+                    <p class="text-gray-600 text-gray-900">Un consultor experto se comunicará con usted en la brevedad posible.</p>
                 </div>
             </div>
         </div>
@@ -245,16 +258,16 @@
     <div id="chatbot" class="fixed bottom-8 right-8 z-[100]">
         <div id="chat-window" class="flex-col w-80 h-[450px] bg-white shadow-2xl rounded-3xl mb-4 border border-gray-100 overflow-hidden">
             <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center">
-                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest text-white">Consultoría Atics</span></div>
+                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest">Consultoría Atics</span></div>
                 <button onclick="toggleChat()" class="text-2xl leading-none">&times;</button>
             </div>
             <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
-                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm">
+                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-gray-900">
                     Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>¿En qué podemos asesorarle hoy con sus necesidades de información?
                 </div>
             </div>
             <div class="p-4 border-t bg-white flex space-x-2">
-                <input type="text" id="wa-message" placeholder="Escriba su consulta..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
+                <input type="text" id="wa-message" placeholder="Escriba su consulta..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3 text-gray-900">
                 <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
@@ -267,6 +280,12 @@
         window.onbeforeunload = function () { window.scrollTo(0, 0); };
         if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
         window.scrollTo(0, 0);
+
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+            if (!isActive) element.classList.add('active');
+        }
 
         const form = document.getElementById('contact-form');
         const successMessage = document.getElementById('success-message');
@@ -291,20 +310,12 @@
         });
 
         function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
-        
-        /* FUNCIONES WHATSAPP */
-        function toggleChat() { 
-            document.getElementById('chatbot').classList.toggle('chat-open'); 
-        }
-
+        function toggleChat() { document.getElementById('chatbot').classList.toggle('chat-open'); }
         function sendWhatsApp() {
             const msg = document.getElementById('wa-message').value;
             const phone = "573239600075";
-            if(msg.trim() !== "") { 
-                window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hola Grupo Atics, ' + msg)}`, '_blank'); 
-            } else {
-                window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hola Grupo Atics, requiero una consultoría especializada.')}`, '_blank');
-            }
+            if(msg.trim() !== "") { window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hola Grupo Atics, ' + msg)}`, '_blank'); }
+            else { window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hola Grupo Atics, requiero una consultoría especializada.')}`, '_blank'); }
         }
     </script>
 </body>
