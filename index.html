@@ -19,6 +19,7 @@
         .hero-video-container video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0; }
         .overlay-dark { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 83, 45, 0.9) 0%, rgba(20, 83, 45, 0.3) 100%); z-index: 1; }
 
+        /* TARJETAS DINÁMICAS CAPACIDADES */
         .capability-card { position: relative; height: 400px; perspective: 1000px; cursor: pointer; }
         .card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; }
         .capability-card:hover .card-inner { transform: rotateY(180deg); }
@@ -27,15 +28,15 @@
         .sector-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; z-index: 0; }
         .sector-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,36,18,0.9), transparent); z-index: 1; }
 
+        /* ESTILO LÍNEAS DE EJECUCIÓN */
+        .linea-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; height: 100%; }
+        .linea-card:hover { transform: translateY(-5px); border-color: #14532d; box-shadow: 0 10px 30px -10px rgba(20, 83, 45, 0.2); }
+
         #chat-window { display: none; }
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         .fade-in { animation: fadeIn 0.5s ease forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { transform: translateY(0); opacity: 1; } }
-
-        /* Estilo para las nuevas tarjetas de ejecución */
-        .linea-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
-        .linea-card:hover { transform: translateY(-5px); border-color: #14532d; box-shadow: 0 10px 30px -10px rgba(20, 83, 45, 0.2); }
     </style>
 </head>
 <body class="bg-white">
@@ -70,7 +71,7 @@
         <div class="overlay-dark"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white text-center md:text-left">
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Consultoría <br><span class="text-green-400">Estratégica</span></h1>
-            <p class="text-xl md:text-2xl max-w-3xl mb-10 font-bold text-green-50 uppercase tracking-wide">Especialistas en levantamiento de información, diseño metodológico y análisis de alto impacto.</p>
+            <p class="text-xl md:text-2xl max-w-3xl mb-10 font-bold text-green-50 uppercase tracking-wide">Expertos en levantamiento de información, diseño metodológico y análisis de alto impacto.</p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
                 <a href="#ejecucion" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white">Líneas de Ejecución</a>
                 <a href="#contacto" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white">Solicitar Asesoría</a>
@@ -133,7 +134,7 @@
                 <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed">Estructuración técnica de marcos muestrales científicos para representatividad absoluta.</p></div></div></div>
                 <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Captura <br>en Campo</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Presencia</h4><p class="text-[11px] leading-relaxed">Recolección nacional técnica con supervisión digital en tiempo real.</p></div></div></div>
                 <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Estudios <br>Cualitativos</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Comprensión</h4><p class="text-[11px] leading-relaxed">Investigación cualitativa para descifrar comportamientos y discursos humanos.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Análisis & <br>Procesamiento</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Potencia</h4><p class="text-[11px] leading-relaxed">Tratamiento avanzado de datos potenciado con IA para detectar patrones complejos.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Análisis & <br>Procesamiento</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Potencia</h4><p class="text-[11px] leading-relaxed">Tratamiento avanzado de datos potenciado con IA para detectar patrones complejos.</p></div></div></div>
                 <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase">Decisiones <br>& BI</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase">Control</h4><p class="text-[11px] leading-relaxed">Visualización estratégica para una gestión basada en evidencia objetiva.</p></div></div></div>
             </div>
         </div>
@@ -142,52 +143,54 @@
     <section id="ejecucion" class="py-32 px-6 bg-gray-50 border-y">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Músculo Operativo</h2>
+                <p class="text-atica-green font-bold text-[11px] uppercase tracking-[0.2em] mb-4">Contamos con la capacidad operativa para ejecutar estudios en diferentes metodologías y canales.</p>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-2 opacity-60">Músculo Operativo</h2>
                 <h3 class="text-4xl font-black text-gray-900 uppercase">Líneas de Ejecución</h3>
-                <p class="max-w-2xl mx-auto mt-4 text-gray-600">Ejecutamos estudios y procesos de información con cobertura nacional, control y calidad en cada etapa.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="linea-card bg-white p-8 rounded-2xl">
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
                     <i class="fa-solid fa-house-chimney-user text-3xl text-atica-green mb-6 block"></i>
                     <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Recolección en Campo</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Operativos presenciales en hogares, puntos de atención y espacios públicos con supervisión en tiempo real.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Ejecutamos operativos presenciales en hogares y puntos de atención con supervisión y control técnico en tiempo real.</p>
                 </div>
-                <div class="linea-card bg-white p-8 rounded-2xl">
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
                     <i class="fa-solid fa-phone-volume text-3xl text-atica-green mb-6 block"></i>
                     <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Telefónicas</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Equipos especializados con sistemas de grabación y trazabilidad para asegurar la calidad de la captura.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Implementamos capturas mediante equipos especializados, garantizando trazabilidad y calidad en cada contacto.</p>
                 </div>
-                <div class="linea-card bg-white p-8 rounded-2xl">
-                    <i class="fa-solid fa-mask text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Cliente Incógnito</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Evaluación de experiencia de servicio mediante metodologías de Mystery Shopping en múltiples canales.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl">
-                    <i class="fa-solid fa-box-open text-3xl text-atica-green mb-6 block"></i>
-                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Pruebas de Producto</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Validación de productos y servicios mediante pruebas controladas (blind tests) con usuarios reales.</p>
-                </div>
-                <div class="linea-card bg-white p-8 rounded-2xl">
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
                     <i class="fa-solid fa-laptop-code text-3xl text-atica-green mb-6 block"></i>
                     <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Web</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Diseño de encuestas digitales con distribución multicanal y control de calidad automatizado.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Desarrollamos instrumentos digitales con distribución multicanal y procesos de validación automatizados.</p>
                 </div>
-                <div class="linea-card bg-white p-8 rounded-2xl">
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
+                    <i class="fa-solid fa-mask text-3xl text-atica-green mb-6 block"></i>
+                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Cliente Incógnito</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Realizamos evaluaciones de experiencia de servicio bajo metodologías de Mystery Shopping en diversos canales de atención.</p>
+                </div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
+                    <i class="fa-solid fa-box-open text-3xl text-atica-green mb-6 block"></i>
+                    <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Pruebas de Producto</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Validamos productos y servicios mediante pruebas controladas con usuarios reales para medir impacto y aceptación.</p>
+                </div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
                     <i class="fa-solid fa-user-group text-3xl text-atica-green mb-6 block"></i>
                     <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Focus Group</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Sesiones cualitativas moderadas por expertos para profundizar en percepciones y comportamientos.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Moderamos sesiones cualitativas diseñadas para profundizar en las motivaciones de compra y toma de decisiones.</p>
                 </div>
-                <div class="linea-card bg-white p-8 rounded-2xl">
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
                     <i class="fa-solid fa-database text-3xl text-atica-green mb-6 block"></i>
                     <h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Procesamiento</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Depuración, codificación y validación de grandes volúmenes de datos bajo estándares rigurosos.</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Procesamos y depuramos grandes volúmenes de información bajo estándares metodológicos de alta rigurosidad.</p>
                 </div>
                 <div class="linea-card bg-atica-green p-8 rounded-2xl flex flex-col justify-center text-center">
-                    <h4 class="text-white font-black uppercase text-sm mb-4">¿Requiere un operativo especial?</h4>
-                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition">Hablemos ahora</a>
+                    <h4 class="text-white font-black uppercase text-sm mb-4">¿Requiere un operativo a medida?</h4>
+                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition">Contactar ahora</a>
                 </div>
             </div>
+
+            <p class="text-center mt-16 text-gray-400 text-xs font-bold uppercase tracking-widest italic">Adaptamos cada metodología a las necesidades específicas de su organización.</p>
         </div>
     </section>
 
@@ -221,6 +224,7 @@
                         <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic">Autorizo a GRUPO ATICS SAS el tratamiento de mis datos personales.</label>
                     </div>
                     <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Solicitud</button>
+                    <p class="text-center text-[10px] font-bold text-gray-400 mt-4 uppercase tracking-widest">Le responderemos en menos de 24 horas.</p>
                 </form>
                 <div id="success-message" class="hidden text-center fade-in">
                     <div class="mb-6"><i class="fa-solid fa-circle-check text-6xl text-green-600"></i></div>
