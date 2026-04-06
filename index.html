@@ -37,8 +37,8 @@
         .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease forwards; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         
-        .linea-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
-        .linea-card:hover { border-color: #14532d; box-shadow: 0 10px 30px rgba(20, 83, 45, 0.1); }
+        .linea-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; height: 100%; }
+        .linea-card:hover { border-color: #14532d; box-shadow: 0 10px 30px rgba(20, 83, 45, 0.1); transform: translateY(-5px); }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -57,6 +57,7 @@
                 <a href="#quienes" class="hover:text-green-700">Nosotros</a>
                 <a href="#equipo" class="hover:text-green-700">Equipo</a>
                 <a href="#capacidades" class="hover:text-green-700">Capacidades</a>
+                <a href="#ejecucion" class="hover:text-green-700">Ejecución</a>
                 <a href="#faq" class="hover:text-green-700">FAQ</a>
                 <a href="#contacto" class="bg-atica-green text-white px-5 py-2.5 rounded hover:bg-green-800 text-[10px]">Contacto</a>
             </nav>
@@ -69,10 +70,10 @@
         <div class="overlay-dark"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white text-center md:text-left">
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none uppercase tracking-tighter">Impacto <br><span class="text-green-400">Metodológico</span></h1>
-            <p class="text-xl md:text-2xl max-w-3xl mb-10 font-bold text-green-50 uppercase tracking-wide">Expertos en diseño muestral, recolección territorial y analítica estratégica para la toma de decisiones.</p>
+            <p class="text-xl md:text-2xl max-w-3xl mb-10 font-bold text-green-50 uppercase tracking-wide">Expertos en diseño muestral, recolección territorial y analítica estratégica.</p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                 <a href="#capacidades" class="bg-green-600 px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-green-500 transition shadow-xl text-white text-center">Ver Capacidades</a>
-                <a href="#contacto" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white text-center">Iniciar Proyecto</a>
+                <a href="#ejecucion" class="border border-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-atica-green transition text-white text-center">Líneas Operativas</a>
             </div>
         </div>
     </section>
@@ -87,11 +88,11 @@
             </div>
             <div>
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Sobre Nosotros</h2>
-                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Solidez técnica para retos nacionales.</h3>
-                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>GRUPO ATICS SAS</b>, la rigurosidad técnica es el pilar de cada proyecto. Consolidamos décadas de experiencia en el diseño y ejecución de operativos de información complejos, garantizando que el dato recolectado se convierta en una ventaja competitiva y estratégica para nuestros clientes.</p>
+                <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight text-gray-900">Solidez técnica para retos nacionales.</h3>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>GRUPO ATICS SAS</b>, transformamos la realidad del territorio en conocimiento estadístico impecable. Consolidamos décadas de experiencia senior garantizando que cada dato recolectado se convierta en una ventaja estratégica para nuestros clientes.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="border-l-4 border-green-500 pl-4"><h4 class="font-bold text-xs uppercase text-atica-green mb-2">Nuestro Propósito</h4><p class="text-xs text-gray-500 italic">Transformar la realidad del territorio en conocimiento estadístico impecable para facilitar decisiones de alto impacto.</p></div>
-                    <div class="border-l-4 border-green-500 pl-4"><h4 class="font-bold text-xs uppercase text-atica-green mb-2">Visión Técnica</h4><p class="text-xs text-gray-500 italic">Ser el referente nacional en ingeniería metodológica y procesamiento analítico especializado.</p></div>
+                    <div class="border-l-4 border-green-500 pl-4"><h4 class="font-bold text-xs uppercase text-atica-green mb-2 text-atica-green">Nuestro Propósito</h4><p class="text-xs text-gray-500 italic">Generar conocimiento accionable mediante procesos técnicos confiables que reduzcan la incertidumbre.</p></div>
+                    <div class="border-l-4 border-green-500 pl-4"><h4 class="font-bold text-xs uppercase text-atica-green mb-2 text-atica-green">Visión Técnica</h4><p class="text-xs text-gray-500 italic">Ser el referente nacional en ingeniería metodológica y procesamiento analítico especializado.</p></div>
                 </div>
             </div>
         </div>
@@ -106,75 +107,93 @@
         </div>
     </section>
 
-    <section id="equipo" class="py-32 bg-gray-50 px-6 border-b">
-        <div class="max-w-7xl mx-auto text-center mb-20">
+    <section id="equipo" class="py-32 bg-gray-50 px-6 border-b text-gray-900">
+        <div class="max-w-7xl mx-auto text-center mb-20 text-gray-900">
             <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Liderazgo</h2>
             <h3 class="text-4xl font-black text-gray-900 uppercase">Nuestro Equipo Directivo</h3>
-            <p class="max-w-2xl mx-auto mt-4 text-gray-500 text-sm italic font-light">Líderes interdisciplinarios con trayectoria comprobada en la dirección de grandes estudios sociales y económicos en Colombia.</p>
+            <p class="max-w-2xl mx-auto mt-4 text-gray-500 text-sm italic font-light">Líderes interdisciplinarios con trayectoria comprobada en grandes estudios nacionales.</p>
         </div>
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-gray-900">
             <div class="bg-white p-10 rounded-3xl shadow-sm text-center border-b-8 border-atica-green hover:shadow-2xl transition duration-500">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-green-100 shadow-xl"><img src="img/Eliana Acevedo.png" class="img-team" alt="Eliana Acevedo"></div>
-                <h4 class="font-bold text-xl uppercase text-gray-900 mb-1">Eliana Yaneth Acevedo</h4>
+                <h4 class="font-bold text-xl uppercase mb-1">Eliana Yaneth Acevedo</h4>
                 <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest">Gerente Administrativa y Financiera</p>
-                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Administradora de Empresas, Contadora Pública y Especialista en Gerencia Tributaria con +15 años de trayectoria. Su experiencia abarca todas las etapas de consultoría, desde la recolección hasta la dirección integral, garantizando la optimización de recursos y la eficiencia operativa en proyectos de alto impacto tanto sociales como empresariales.</p>
+                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Administradora de Empresas y Contadora Pública con +15 años de trayectoria. Su experiencia abarca todas las etapas de consultoría, desde la recolección hasta la dirección integral, garantizando la optimización de recursos y la eficiencia operativa en proyectos de alto impacto.</p>
             </div>
             <div class="bg-white p-10 rounded-3xl shadow-sm text-center border-b-8 border-atica-green hover:shadow-2xl transition duration-500">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-green-100 shadow-xl"><img src="img/Luis Bohorquez.png" class="img-team" alt="Luis Bohorquez"></div>
-                <h4 class="font-bold text-xl uppercase text-gray-900 mb-1">Luis Gabriel Bohórquez</h4>
+                <h4 class="font-bold text-xl uppercase mb-1 text-gray-900">Luis Gabriel Bohórquez</h4>
                 <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest">Director de Proyectos y Analítica</p>
-                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Ingeniero de Software y Especialista en Analítica con +20 años de experiencia en el sector. Su trayectoria abarca desde la ejecución en campo hasta la gerencia de proyectos nacionales con entidades como FAO, PMA y SISBEN, permitiéndole estructurar operativos eficientes e interpretar de manera estratégica la información recolectada.</p>
+                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Ingeniero de Software y Especialista en Analítica con +20 años de experiencia. Su trayectoria integral con entidades como FAO, PMA y SISBEN, le permite estructurar operativos eficientes e interpretar de manera estratégica la información recolectada en campo.</p>
             </div>
             <div class="bg-white p-10 rounded-3xl shadow-sm text-center border-b-8 border-atica-green hover:shadow-2xl transition duration-500">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-green-100 shadow-xl"><img src="img/Juan Jose.png" class="img-team" alt="Juan Jose"></div>
-                <h4 class="font-bold text-xl uppercase text-gray-900 mb-1">Juan José Rubio</h4>
+                <h4 class="font-bold text-xl uppercase mb-1">Juan José Rubio</h4>
                 <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest">Director de Metodología y Muestreo</p>
-                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Estadístico experto en muestreo y aspirante a Magíster en Estadística. Con amplia experiencia en el diseño de modelos muestrales para proyectos de alto impacto público y ONGs internacionales, su trabajo es fundamental en la estructuración de estudios orientados a la toma de decisiones críticas y la inversión en el país.</p>
+                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Estadístico experto en muestreo y aspirante a Magíster en Estadística. Especialista en el diseño de modelos muestrales para proyectos de inversión y toma de decisiones para el sector público y ONGs internacionales.</p>
             </div>
         </div>
     </section>
 
-    <section id="capacidades" class="py-24 px-6 bg-white overflow-hidden">
+    <section id="capacidades" class="py-24 px-6 bg-white overflow-hidden text-gray-900">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 text-center md:text-left">
-                <p class="text-green-600 font-bold uppercase text-[10px] tracking-[0.3em] mb-2 italic">Acompañamos todo el ciclo de información</p>
+                <p class="text-green-600 font-bold uppercase text-[10px] tracking-[0.3em] mb-2 italic text-gray-900">Acompañamos todo el ciclo de información</p>
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 underline decoration-green-500 decoration-4 underline-offset-8 inline-block">Nuestras Capacidades</h2>
-                <h3 class="text-4xl font-black text-gray-900 uppercase mt-2 text-gray-900">Ingeniería Técnica de Información</h3>
+                <h3 class="text-4xl font-black text-gray-900 uppercase mt-2">Ingeniería Técnica de Información</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed text-center">Estructuración técnica de marcos muestrales científicos para representatividad absoluta.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Captura <br>en Campo</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Presencia</h4><p class="text-[11px] leading-relaxed text-center text-white">Recolección nacional técnica con supervisión digital en tiempo real.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Estudios <br>Cualitativos</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Comprensión</h4><p class="text-[11px] leading-relaxed text-center text-white">Investigación cualitativa para descifrar comportamientos y discursos humanos.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Análisis & <br>Procesamiento</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Potencia</h4><p class="text-[11px] leading-relaxed text-center text-white">Tratamiento avanzado de datos para detectar patrones complejos y riesgos.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed text-center">Estructuración técnica de marcos muestrales científicos para representatividad absoluta.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Captura <br>en Campo</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Presencia</h4><p class="text-[11px] leading-relaxed text-center text-white">Recolección nacional técnica con supervisión digital en tiempo real.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Estudios <br>Cualitativos</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-white text-white">Comprensión</h4><p class="text-[11px] leading-relaxed text-center text-white">Análisis de discurso y factores humanos para entender la realidad detrás de la data.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Análisis & <br>Procesamiento</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Potencia</h4><p class="text-[11px] leading-relaxed text-center text-white">Tratamiento avanzado de datos para detectar patrones complejos y reducir riesgos.</p></div></div></div>
                 <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Decisiones <br>& BI</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Control</h4><p class="text-[11px] leading-relaxed text-center text-white">Visualización estratégica para una gestión basada en evidencia objetiva.</p></div></div></div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-32 px-6 bg-gray-50 border-y">
+    <section id="ejecucion" class="py-32 px-6 bg-gray-50 border-y">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <p class="text-atica-green font-bold text-[11px] uppercase tracking-[0.2em] mb-4">Contamos con la capacidad operativa para ejecutar estudios en diferentes metodologías y canales.</p>
+                <h3 class="text-4xl font-black text-gray-900 uppercase">Líneas de Ejecución</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-house-chimney-user text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900 text-gray-900">Recolección en Campo</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900/70">Ejecutamos operativos presenciales en hogares y puntos de atención con supervisión técnica en tiempo real.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-phone-volume text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Telefónicas</h4><p class="text-xs text-gray-500 leading-relaxed">Implementamos capturas mediante equipos especializados, garantizando trazabilidad y calidad.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-laptop-code text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Web</h4><p class="text-xs text-gray-500 leading-relaxed">Desarrollamos instrumentos digitales con distribución multicanal y validación automatizada.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-mask text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900 text-gray-900">Cliente Incógnito</h4><p class="text-xs text-gray-500 leading-relaxed">Realizamos evaluaciones de experiencia de servicio bajo metodologías de Mystery Shopping.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-box-open text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900 text-gray-900 text-gray-900">Pruebas de Producto</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900/70">Validamos productos y servicios mediante pruebas controladas con usuarios reales para medir impacto.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-user-group text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900 text-gray-900">Focus Group</h4><p class="text-xs text-gray-500 leading-relaxed">Moderamos sesiones cualitativas diseñadas para profundizar en motivaciones y toma de decisiones.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-database text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900 text-gray-900 text-gray-900 text-gray-900">Procesamiento</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900/70">Procesamos y depuramos grandes volúmenes de información bajo estándares de alta rigurosidad.</p></div>
+                <div class="linea-card bg-atica-green p-8 rounded-2xl flex flex-col justify-center text-center">
+                    <h4 class="text-white font-black uppercase text-sm mb-4 text-white">¿Requiere un operativo a medida?</h4>
+                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition shadow-lg text-white">Hablemos ahora</a>
+                </div>
+            </div>
+            <p class="text-center mt-16 text-gray-400 text-xs font-bold uppercase tracking-widest italic">Adaptamos cada metodología a las necesidades específicas de su organización.</p>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 px-6 bg-white border-b">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Metodología y Alcance</h2>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 text-atica-green">Metodología y Alcance</h2>
                 <h3 class="text-4xl font-black text-gray-900 uppercase">Preguntas Frecuentes</h3>
-                <p class="text-gray-500 mt-4 italic font-light leading-relaxed">Respuestas técnicas sobre nuestro diferencial operativo y metodológico.</p>
+                <p class="text-gray-500 mt-4 italic font-light">Respuestas técnicas sobre nuestro diferencial operativo.</p>
             </div>
-            
             <div class="space-y-4">
                 <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
                     <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900">¿Cuál es su valor agregado en el diseño de modelos muestrales?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Contamos con experticia estadística senior para el diseño de muestras probabilísticas, multietápicas y estratificadas. Aseguramos la representatividad técnica del universo objetivo, optimizando costos sin sacrificar el nivel de confianza necesario para estudios de inversión o política pública.</p></div>
-                </div>
-                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900">¿Cómo abordan la recolección cualitativa y cuantitativa?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Diseñamos instrumentos a medida. En lo cuantitativo, usamos dispositivos móviles con captura en tiempo real (CAPI/CATI). En lo cualitativo, aplicamos guías de pauta profundas, moderación experta en grupos focales y técnicas de observación, integrando ambos enfoques para un análisis 360°.</p></div>
+                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Contamos con experticia estadística senior para el diseño de muestras probabilísticas y estratificadas, asegurando representatividad absoluta y optimización de recursos.</p></div>
                 </div>
                 <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
                     <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900">¿Qué procesos de validación y control de calidad aplican?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Nuestra metodología exige supervisión de tres niveles: 1) Georreferenciación y marcación de tiempo automática. 2) Auditoría telefónica y presencial al 20% de la muestra. 3) Algoritmos de limpieza y depuración lógica que detectan inconsistencias antes del análisis.</p></div>
+                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Supervisión de tres niveles: 1) Georreferenciación digital. 2) Auditoría al 20% de la muestra. 3) Algoritmos de depuración lógica en tiempo real.</p></div>
                 </div>
                 <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
                     <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900">¿Cómo apoyan la toma de decisiones mediante analítica y BI?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Transformamos datos planos en conocimiento accionable. Utilizamos herramientas de BI (Power BI/Tableau) para crear tableros dinámicos que permiten a la gerencia interactuar con los resultados, cruzar variables y proyectar escenarios basados en evidencia real.</p></div>
+                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Entregamos tableros dinámicos (Power BI/Tableau) que permiten a la gerencia interactuar con los resultados y proyectar escenarios basados en evidencia real.</p></div>
                 </div>
             </div>
         </div>
@@ -184,7 +203,7 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
                 <div class="mb-10 border-l-4 border-green-500 pl-5">
-                    <span class="block text-3xl font-black uppercase text-white tracking-tighter leading-none">GRUPO ATICS</span>
+                    <span class="block text-3xl font-black uppercase text-white tracking-tighter">GRUPO ATICS</span>
                     <span class="text-[10px] font-bold text-green-400 uppercase tracking-[0.4em] mt-1 block">Datos que impulsan decisiones</span>
                 </div>
                 <h2 class="text-4xl font-black mb-8 text-green-400 uppercase italic">Iniciemos hoy <br>mismo su proyecto</h2>
@@ -204,13 +223,12 @@
                         <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
                     </div>
                     <input type="email" name="Email" required placeholder="Email Corporativo" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600">
-                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar su necesidad de información?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900"></textarea>
+                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo podemos apoyar su necesidad de información?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600"></textarea>
                     <div class="flex items-start space-x-3 py-2">
                         <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded cursor-pointer">
-                        <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic">Autorizo el tratamiento de mis datos personales.</label>
+                        <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic text-gray-900/60">Autorizo el tratamiento de mis datos personales.</label>
                     </div>
                     <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Solicitud</button>
-                    <p class="text-center text-[10px] font-bold text-gray-400 mt-4 uppercase tracking-widest">Le responderemos en menos de 24 horas.</p>
                 </form>
                 <div id="success-message" class="hidden text-center fade-in">
                     <div class="mb-6"><i class="fa-solid fa-circle-check text-6xl text-green-600"></i></div>
@@ -226,10 +244,10 @@
         <div id="chat-window" class="flex-col w-80 h-[450px] bg-white shadow-2xl rounded-3xl mb-4 border border-gray-100 overflow-hidden text-gray-900">
             <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center">
                 <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest">Consultoría Atics</span></div>
-                <button onclick="toggleChat()" class="text-2xl leading-none">&times;</button>
+                <button onclick="toggleChat()" class="text-2xl leading-none text-white">&times;</button>
             </div>
-            <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
-                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm">Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>¿En qué podemos asesorarle hoy con sus necesidades de información?</div>
+            <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto text-gray-900">
+                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-gray-900">Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>¿En qué podemos asesorarle hoy con sus necesidades de información?</div>
             </div>
             <div class="p-4 border-t bg-white flex space-x-2">
                 <input type="text" id="wa-message" placeholder="Escriba su consulta..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
