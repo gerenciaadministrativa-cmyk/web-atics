@@ -28,13 +28,15 @@
         .sector-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; z-index: 0; }
         .sector-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,36,18,0.9), transparent); z-index: 1; }
 
-        /* ESTILO LÍNEAS DE EJECUCIÓN */
+        /* LÍNEAS DE EJECUCIÓN */
         .linea-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; height: 100%; }
         .linea-card:hover { transform: translateY(-5px); border-color: #14532d; box-shadow: 0 10px 30px -10px rgba(20, 83, 45, 0.2); }
 
+        /* CHATBOT WHATSAPP */
         #chat-window { display: none; }
-        .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease; }
+        .chat-open #chat-window { display: flex; animation: slideUp 0.3s ease forwards; }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        
         .fade-in { animation: fadeIn 0.5s ease forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { transform: translateY(0); opacity: 1; } }
     </style>
@@ -147,7 +149,6 @@
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-2 opacity-60">Músculo Operativo</h2>
                 <h3 class="text-4xl font-black text-gray-900 uppercase">Líneas de Ejecución</h3>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="linea-card bg-white p-8 rounded-2xl flex flex-col">
                     <i class="fa-solid fa-house-chimney-user text-3xl text-atica-green mb-6 block"></i>
@@ -186,10 +187,9 @@
                 </div>
                 <div class="linea-card bg-atica-green p-8 rounded-2xl flex flex-col justify-center text-center">
                     <h4 class="text-white font-black uppercase text-sm mb-4">¿Requiere un operativo a medida?</h4>
-                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition">Contactar ahora</a>
+                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition shadow-lg">Contactar ahora</a>
                 </div>
             </div>
-
             <p class="text-center mt-16 text-gray-400 text-xs font-bold uppercase tracking-widest italic">Adaptamos cada metodología a las necesidades específicas de su organización.</p>
         </div>
     </section>
@@ -201,11 +201,17 @@
                     <span class="block text-3xl font-black uppercase text-white tracking-tighter">GRUPO ATICS</span>
                     <span class="text-[10px] font-bold text-green-400 uppercase tracking-[0.4em] mt-1 block">Datos que impulsan decisiones</span>
                 </div>
-                <h2 class="text-4xl font-black mb-8 text-green-400 uppercase italic">Iniciemos hoy <br>mismo su proyecto</h2>
+                <h2 class="text-4xl font-black mb-8 text-green-400 uppercase italic leading-none tracking-tighter">Iniciemos hoy <br>mismo su proyecto</h2>
                 <div class="space-y-4 opacity-70 mb-10 text-sm">
                     <p><i class="fa-solid fa-location-dot mr-3 text-green-500"></i> Calle 25 # 69 51, Bogotá, Colombia</p>
                     <p><i class="fa-solid fa-phone mr-3 text-green-500"></i> +57 3239600075</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
+                </div>
+                <div class="flex space-x-6 text-3xl">
+                    <a href="https://facebook.com/grupoatics" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/grupoatics" target="_blank" class="hover:text-gray-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/company/grupoatics" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/grupoatics" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -236,6 +242,27 @@
         <p class="mt-20 text-center text-[10px] opacity-40 border-t border-white/10 pt-10">&copy; 2026 GRUPO ATICS SAS | Bogotá DC</p>
     </footer>
 
+    <div id="chatbot" class="fixed bottom-8 right-8 z-[100]">
+        <div id="chat-window" class="flex-col w-80 h-[450px] bg-white shadow-2xl rounded-3xl mb-4 border border-gray-100 overflow-hidden">
+            <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center">
+                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest text-white">Consultoría Atics</span></div>
+                <button onclick="toggleChat()" class="text-2xl leading-none">&times;</button>
+            </div>
+            <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
+                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm">
+                    Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>¿En qué podemos asesorarle hoy con sus necesidades de información?
+                </div>
+            </div>
+            <div class="p-4 border-t bg-white flex space-x-2">
+                <input type="text" id="wa-message" placeholder="Escriba su consulta..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3">
+                <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button onclick="toggleChat()" class="bg-[#25D366] w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all text-white active:rotate-12 shadow-green-900/40">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+    </div>
+
     <script>
         window.onbeforeunload = function () { window.scrollTo(0, 0); };
         if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
@@ -264,6 +291,21 @@
         });
 
         function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        
+        /* FUNCIONES WHATSAPP */
+        function toggleChat() { 
+            document.getElementById('chatbot').classList.toggle('chat-open'); 
+        }
+
+        function sendWhatsApp() {
+            const msg = document.getElementById('wa-message').value;
+            const phone = "573239600075";
+            if(msg.trim() !== "") { 
+                window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hola Grupo Atics, ' + msg)}`, '_blank'); 
+            } else {
+                window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hola Grupo Atics, requiero una consultoría especializada.')}`, '_blank');
+            }
+        }
     </script>
 </body>
 </html>
