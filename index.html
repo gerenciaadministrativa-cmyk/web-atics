@@ -56,16 +56,30 @@
                     <span class="text-[7px] md:text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em]">Estudios de mercado en Colombia</span>
                 </div>
             </div>
+            
             <nav class="hidden lg:flex items-center space-x-6 text-[10px] font-bold uppercase text-gray-600">
-                <a href="#inicio" class="hover:text-green-700">Inicio</a>
-                <a href="#quienes" class="hover:text-green-700">Nosotros</a>
-                <a href="#equipo" class="hover:text-green-700">Equipo</a>
-                <a href="#capacidades" class="hover:text-green-700">¿Qué hacemos?</a>
-                <a href="#ejecucion" class="hover:text-green-700">Ejecución</a>
-                <a href="#faq" class="hover:text-green-700">FAQ</a>
+                <a href="#inicio" class="hover:text-green-700 text-gray-900">Inicio</a>
+                <a href="#quienes" class="hover:text-green-700 text-gray-900">Nosotros</a>
+                <a href="#equipo" class="hover:text-green-700 text-gray-900">Equipo</a>
+                <a href="#capacidades" class="hover:text-green-700 text-gray-900">¿Qué hacemos?</a>
+                <a href="#ejecucion" class="hover:text-green-700 text-gray-900">Ejecución</a>
+                <a href="#faq" class="hover:text-green-700 text-gray-900">FAQ</a>
                 <a href="#contacto" class="bg-atica-green text-white px-5 py-2.5 rounded hover:bg-green-800 text-[10px]">Contacto</a>
             </nav>
-            <button onclick="toggleMobileMenu()" class="lg:hidden text-atica-green text-3xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
+
+            <button onclick="toggleMobileMenu()" class="lg:hidden text-atica-green text-3xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 flex flex-col space-y-4 p-6 text-[12px] font-bold uppercase text-gray-600 shadow-xl">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="hover:text-green-700">Inicio</a>
+            <a href="#quienes" onclick="toggleMobileMenu()" class="hover:text-green-700">Nosotros</a>
+            <a href="#equipo" onclick="toggleMobileMenu()" class="hover:text-green-700">Equipo</a>
+            <a href="#capacidades" onclick="toggleMobileMenu()" class="hover:text-green-700">¿Qué hacemos?</a>
+            <a href="#ejecucion" onclick="toggleMobileMenu()" class="hover:text-green-700">Ejecución</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-green-700">FAQ</a>
+            <a href="#contacto" onclick="toggleMobileMenu()" class="bg-atica-green text-white text-center py-3 rounded">Contacto</a>
         </div>
     </header>
 
@@ -73,11 +87,11 @@
         <video autoplay muted loop playsinline><source src="video/fondo-hero.mp4" type="video/mp4"></video>
         <div class="overlay-dark"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white text-center md:text-left">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight uppercase tracking-tighter">Grupo Atics <br><span class="text-green-400">Soluciones Estratégicas</span></h1>
-            <p class="text-lg md:text-xl max-w-2xl mb-8 font-medium text-gray-100 uppercase tracking-wide opacity-90">Líderes en recolección de datos y analítica para estudios de mercado en Colombia.</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight uppercase tracking-tighter text-white">Grupo Atics <br><span class="text-green-400">Soluciones Estratégicas</span></h1>
+            <p class="text-lg md:text-xl max-w-2xl mb-8 font-medium text-gray-100 uppercase tracking-wide opacity-90 text-white">Líderes en recolección de datos y analítica para estudios de mercado en Colombia.</p>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#capacidades" class="bg-green-600 px-10 py-3.5 rounded-lg font-bold uppercase text-[11px] tracking-widest hover:bg-green-500 transition shadow-2xl text-white text-center">Ver Capacidades</a>
-                <a href="#ejecucion" class="border-2 border-white px-10 py-3.5 rounded-lg font-bold uppercase text-[11px] tracking-widest hover:bg-white hover:text-atica-green transition text-white text-center">Líneas Operativas</a>
+                <a href="#capacidades" class="bg-green-600 px-10 py-3.5 rounded-lg font-bold uppercase text-[11px] tracking-widest hover:bg-green-500 transition shadow-2xl text-white text-center text-white">Ver Capacidades</a>
+                <a href="#ejecucion" class="border-2 border-white px-10 py-3.5 rounded-lg font-bold uppercase text-[11px] tracking-widest hover:bg-white hover:text-atica-green transition text-white text-center text-white">Líneas Operativas</a>
             </div>
         </div>
     </section>
@@ -87,16 +101,16 @@
             <div class="relative">
                 <img src="img/nosotros.png" class="rounded-3xl shadow-2xl relative z-10" alt="Grupo Atics Colombia">
                 <div class="absolute -bottom-8 -right-8 bg-atica-green p-10 rounded-2xl text-white hidden md:block text-center shadow-2xl z-20">
-                    <p class="text-5xl font-black leading-none">+20</p><p class="text-[9px] font-bold uppercase tracking-[0.2em]">Años de Trayectoria</p>
+                    <p class="text-5xl font-black leading-none">+20</p><p class="text-[9px] font-bold uppercase tracking-[0.2em]">Años de Experiencia</p>
                 </div>
             </div>
             <div>
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Conozca Grupo Atics</h2>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4">Grupo Atics en Colombia</h2>
                 <h3 class="text-4xl font-black text-gray-900 mb-8 uppercase leading-tight">Solidez técnica para retos nacionales.</h3>
-                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>Grupo Atics</b> transformamos la realidad del territorio en conocimiento estadístico impecable. Los servicios de <b>Grupo Atics</b> consolidan décadas de experiencia senior garantizando que cada dato recolectado se convierta en una ventaja estratégica.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">En <b>Grupo Atics</b> somos especialistas en transformar la realidad del territorio colombiano en conocimiento estadístico impecable. Nuestra presencia en <b>Bogotá</b> y cobertura nacional nos permite garantizar recolección de datos de alta fidelidad para sus estudios de mercado.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-900">
                     <div class="border-l-4 border-green-500 pl-4"><h4 class="font-bold text-xs uppercase text-atica-green mb-2">Nuestro Propósito</h4><p class="text-xs text-gray-500 italic">Generar conocimiento accionable mediante procesos técnicos confiables que reduzcan la incertidumbre en sus proyectos.</p></div>
-                    <div class="border-l-4 border-green-500 pl-4"><h4 class="font-bold text-xs uppercase text-gray-900 mb-2">Visión en Bogotá</h4><p class="text-xs text-gray-500 italic">Ser el referente en ingeniería metodológica y procesamiento analítico especializado en Colombia.</p></div>
+                    <div class="border-l-4 border-green-500 pl-4"><h4 class="font-bold text-xs uppercase text-gray-900 mb-2">Visión en Bogotá</h4><p class="text-xs text-gray-500 italic text-gray-900">Ser el referente en ingeniería metodológica y procesamiento analítico especializado en Colombia.</p></div>
                 </div>
             </div>
         </div>
@@ -121,79 +135,45 @@
             <div class="bg-white p-10 rounded-3xl shadow-sm text-center border-b-8 border-atica-green hover:shadow-2xl transition duration-500">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-green-100 shadow-xl"><img src="img/Eliana Acevedo.png" class="img-team" alt="Eliana Acevedo - Grupo Atics"></div>
                 <h4 class="font-bold text-xl uppercase mb-1">Eliana Yaneth Acevedo</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest">Gerente General</p>
-                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Administradora de Empresas y Contadora Pública con +15 años de trayectoria liderando la optimización de recursos y la eficiencia operativa en proyectos nacionales.</p>
+                <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest text-atica-green">Gerente General</p>
+                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Administradora de Empresas y Contadora Pública con +15 años de trayectoria liderando la optimización de recursos y la eficiencia operativa en proyectos nacionales. [cite: 485, 486]</p>
             </div>
             <div class="bg-white p-10 rounded-3xl shadow-sm text-center border-b-8 border-atica-green hover:shadow-2xl transition duration-500">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-green-100 shadow-xl"><img src="img/Luis Bohorquez.png" class="img-team" alt="Luis Bohorquez - Grupo Atics"></div>
-                <h4 class="font-bold text-xl uppercase mb-1">Luis Gabriel Bohórquez</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest text-gray-900">Director de Proyectos y Analítica</p>
-                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Ingeniero y Especialista en Analítica con +20 años de experiencia. Su trayectoria integral le permite a <b>Grupo Atics</b> estructurar operativos eficientes e interpretar estratégicamente la información.</p>
+                <h4 class="font-bold text-xl uppercase mb-1 text-gray-900">Luis Gabriel Bohórquez</h4>
+                <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest text-atica-green">Director de Proyectos y Analítica</p>
+                <p class="text-[12px] text-gray-600 leading-relaxed text-justify">Ingeniero y Especialista en Analítica con +20 años de experiencia. Su trayectoria con entidades como FAO, PMA y SISBEN permite a <b>Grupo Atics</b> estructurar operativos eficientes. [cite: 8, 9, 21, 25, 29, 39, 40, 269]</p>
             </div>
             <div class="bg-white p-10 rounded-3xl shadow-sm text-center border-b-8 border-atica-green hover:shadow-2xl transition duration-500">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-green-100 shadow-xl"><img src="img/Juan Jose.png" class="img-team" alt="Juan Jose - Grupo Atics"></div>
-                <h4 class="font-bold text-xl uppercase mb-1 text-gray-900">Juan José Rubio</h4>
-                <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest">Director de Metodología y Muestreo</p>
+                <h4 class="font-bold text-xl uppercase mb-1 text-gray-900 text-gray-900">Juan José Rubio</h4>
+                <p class="text-atica-green font-bold text-[10px] uppercase mb-6 tracking-widest text-atica-green text-gray-900">Director de Metodología y Muestreo</p>
                 <p class="text-[12px] text-gray-600 leading-relaxed text-justify text-gray-900">Estadístico experto en diseño muestral. Su trabajo en <b>Grupo Atics</b> es fundamental en la estructuración de estudios orientados a la toma de decisiones críticas.</p>
             </div>
         </div>
     </section>
 
-    <section id="experiencia" class="py-32 px-6 bg-white border-b text-gray-900">
+    <section id="experiencia" class="py-32 px-6 bg-white border-b text-gray-900 text-gray-900">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20 text-gray-900">
+            <div class="text-center mb-20">
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 text-gray-900">Trayectoria Senior</h2>
                 <h3 class="text-4xl font-black text-gray-900 uppercase">Sectores y Experiencia de Alto Impacto</h3>
-                <p class="max-w-2xl mx-auto mt-4 text-gray-500 text-sm italic font-light">En <b>Grupo Atics</b> respaldamos nuestras metodologías con la experiencia acumulada en proyectos nacionales e internacionales de gran envergadura.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 text-gray-900">
                 <div>
                     <h4 class="text-2xl font-black text-atica-green uppercase mb-8 border-l-8 border-green-500 pl-4">Sectores Atendidos</h4>
                     <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <i class="fa-solid fa-users-rays text-2xl text-green-600 mt-1"></i>
-                            <div>
-                                <h5 class="font-bold text-gray-900 uppercase text-sm">Sector Social y Caracterización</h5>
-                                <p class="text-xs text-gray-500 leading-relaxed">Experiencia robusta en estudios de población vulnerable, caracterización de víctimas del conflicto y programas de integración social.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <i class="fa-solid fa-landmark text-2xl text-green-600 mt-1"></i>
-                            <div>
-                                <h5 class="font-bold text-gray-900 uppercase text-sm">Entidades Gubernamentales</h5>
-                                <p class="text-xs text-gray-500 leading-relaxed">Liderazgo en la recolección de información para planeación nacional, censos especializados y auditorías de política pública.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <i class="fa-solid fa-cart-shopping text-2xl text-green-600 mt-1"></i>
-                            <div>
-                                <h5 class="font-bold text-gray-900 uppercase text-sm">Consumo Masivo y Opinión</h5>
-                                <p class="text-xs text-gray-500 leading-relaxed">Ejecución de estudios de mercado, cultura ciudadana y evaluación de impacto de servicios en hogares a nivel nacional.</p>
-                            </div>
-                        </div>
+                        <div class="flex items-start space-x-4"><i class="fa-solid fa-users-rays text-2xl text-green-600 mt-1"></i><div><h5 class="font-bold text-gray-900 uppercase text-sm">Sector Social y Caracterización</h5><p class="text-xs text-gray-500">Experiencia en estudios de población vulnerable, SISBEN y programas de integración social. [cite: 25, 353, 394]</p></div></div>
+                        <div class="flex items-start space-x-4"><i class="fa-solid fa-landmark text-2xl text-green-600 mt-1"></i><div><h5 class="font-bold text-gray-900 uppercase text-sm">Entidades Gubernamentales</h5><p class="text-xs text-gray-500">Recolección de información para planeación nacional y auditorías del Ministerio TIC. [cite: 269, 339]</p></div></div>
+                        <div class="flex items-start space-x-4"><i class="fa-solid fa-cart-shopping text-2xl text-green-600 mt-1"></i><div><h5 class="font-bold text-gray-900 uppercase text-sm">Consumo Masivo y Opinión</h5><p class="text-xs text-gray-500">Ejecución de estudios de mercado, cultura ciudadana y evaluación de servicios. [cite: 111, 219]</p></div></div>
                     </div>
                 </div>
-
                 <div>
                     <h4 class="text-2xl font-black text-atica-green uppercase mb-8 border-l-8 border-green-500 pl-4">Proyectos Destacados</h4>
                     <ul class="space-y-4">
-                        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-atica-green">
-                            <p class="text-xs font-bold text-gray-900 uppercase mb-1">Censos y Caracterización Nacional</p>
-                            <p class="text-[11px] text-gray-500">Liderazgo en operativos de más de 10,000 encuestas en múltiples municipios para la identificación de beneficiarios de programas sociales.</p>
-                        </li>
-                        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-atica-green">
-                            <p class="text-xs font-bold text-gray-900 uppercase mb-1">Evaluación de Impacto TIC</p>
-                            <p class="text-[11px] text-gray-500">Seguimiento técnico y asesoría informática para iniciativas de conectividad nacional del Ministerio de las TIC.</p>
-                        </li>
-                        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-atica-green">
-                            <p class="text-xs font-bold text-gray-900 uppercase mb-1">Estudios de Reputación y Confianza</p>
-                            <p class="text-[11px] text-gray-500">Medición de percepción y estima para entidades financieras y grupos de interés en el sector infraestructura.</p>
-                        </li>
-                        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-atica-green">
-                            <p class="text-xs font-bold text-gray-900 uppercase mb-1">Investigación para Agencias Internacionales</p>
-                            <p class="text-[11px] text-gray-500">Coordinación de recolección de información para programas de seguridad alimentaria y medios de vida.</p>
-                        </li>
+                        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-atica-green"><p class="text-xs font-bold text-gray-900 uppercase mb-1">Censos y Caracterización Nacional</p><p class="text-[11px] text-gray-500">Operativos masivos de más de 10,000 encuestas en múltiples municipios del país. [cite: 229, 290]</p></li>
+                        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-atica-green"><p class="text-xs font-bold text-gray-900 uppercase mb-1">Evaluación de Impacto TIC</p><p class="text-[11px] text-gray-500">Asesoría informática para iniciativas de conectividad nacional del Gobierno. [cite: 269]</p></li>
+                        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-atica-green"><p class="text-xs font-bold text-gray-900 uppercase mb-1">Investigación Agencias Internacionales</p><p class="text-[11px] text-gray-500">Coordinación de datos para programas de seguridad alimentaria de FAO y PMA. [cite: 129, 133, 134]</p></li>
                     </ul>
                 </div>
             </div>
@@ -205,14 +185,14 @@
             <div class="mb-16 text-center md:text-left">
                 <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 underline decoration-green-500 decoration-4 underline-offset-8 inline-block text-atica-green">¿Qué hacemos en Grupo Atics?</h2>
                 <h3 class="text-4xl font-black text-gray-900 uppercase mt-2">Estudios de Mercado y Recolección de Información</h3>
-                <p class="max-w-4xl mt-4 text-gray-500 text-sm italic font-light text-gray-900">En Grupo Atics ayudamos a empresas o negocios a tomar decisiones estratégicas basadas en información real del mercado.</p>
+                <p class="max-w-4xl mt-4 text-gray-500 text-sm italic font-light">En Grupo Atics ayudamos a empresas o negocios a tomar decisiones estratégicas basadas en información real del mercado.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed text-center">Marcos muestrales científicos para una recolección de información con representatividad absoluta.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Estudios de <br>Mercado</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white">Cuali y Cuanti</h4><p class="text-[11px] leading-relaxed text-center text-white">Investigación integral en toda Colombia mediante metodologías técnicas de punta.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white text-white">Focus <br>Group</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-white">Comprensión Humana</h4><p class="text-[11px] leading-relaxed text-center text-white text-white text-white">Técnicas cualitativas profundas para entender al consumidor colombiano.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Analítica <br>& BI</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-white">Inteligencia</h4><p class="text-[11px] leading-relaxed text-center text-white text-white text-white">Procesamiento avanzado para transformar el dato en decisión estratégica.</p></div></div></div>
-                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-4xl mb-4 text-green-400 text-white"></i><h4 class="text-lg font-bold uppercase leading-tight">Cliente <br>Incógnito</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-white">Evaluación</h4><p class="text-[11px] leading-relaxed text-center text-white text-white text-white">Medición de la experiencia de servicio en canales de atención reales.</p></div></div></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 text-gray-900">
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-layer-group text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight">Diseño <br>Muestral</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center">Rigor Estadístico</h4><p class="text-[11px] leading-relaxed text-center">Estructuración técnica para una recolección con representatividad absoluta.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-publico.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-map-location-dot text-3xl mb-4 text-green-400 text-gray-900 text-white"></i><h4 class="text-lg font-bold uppercase leading-tight">Estudios de <br>Mercado</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-gray-900 text-white">Cuali y Cuanti</h4><p class="text-[11px] leading-relaxed text-center text-white">Investigación integral en toda Colombia mediante metodologías técnicas.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-salud.mp4" type="video/mp4"></video><div class="sector-overlay text-white"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-users-viewfinder text-3xl mb-4 text-green-400"></i><h4 class="text-lg font-bold uppercase leading-tight text-white">Focus <br>Group</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-white text-white">Comprensión</h4><p class="text-[11px] leading-relaxed text-center text-white text-white">Técnicas cualitativas profundas para entender al consumidor colombiano.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-banca.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-brain text-4xl mb-4 text-green-400 text-white"></i><h4 class="text-lg font-bold uppercase leading-tight">Analítica <br>& BI</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-white">Inteligencia</h4><p class="text-[11px] leading-relaxed text-center text-white text-white">Procesamiento avanzado para transformar el dato en decisión estratégica.</p></div></div></div>
+                <div class="capability-card group"><div class="card-inner"><div class="card-front"><video autoplay muted loop playsinline class="sector-video-bg"><source src="video/sector-comercio.mp4" type="video/mp4"></video><div class="sector-overlay"></div><div class="absolute bottom-8 left-6 z-10 text-white"><i class="fa-solid fa-chart-pie text-4xl mb-4 text-green-400 text-white"></i><h4 class="text-lg font-bold uppercase leading-tight">Cliente <br>Incógnito</h4></div></div><div class="card-back"><h4 class="text-sm font-black mb-2 text-green-400 uppercase text-center text-white text-white">Evaluación</h4><p class="text-[11px] leading-relaxed text-center text-white text-white">Medición de la experiencia de servicio en canales de atención reales.</p></div></div></div>
             </div>
         </div>
     </section>
@@ -220,61 +200,49 @@
     <section id="ejecucion" class="py-32 px-6 bg-gray-50 border-y text-gray-900 text-gray-900">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20 text-gray-900">
-                <p class="text-atica-green font-bold text-[11px] uppercase tracking-[0.2em] mb-4">Músculo operativo de Grupo Atics en Colombia.</p>
+                <p class="text-atica-green font-bold text-[11px] uppercase tracking-[0.2em] mb-4 text-gray-900">Músculo operativo de Grupo Atics en Colombia.</p>
                 <h3 class="text-4xl font-black text-gray-900 uppercase text-gray-900">Líneas de Ejecución y Servicios</h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-900 text-gray-900">
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-house-chimney-user text-3xl text-atica-green mb-6 block text-gray-900"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas en Campo</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Operativos presenciales en hogares con supervisión de <b>Grupo Atics</b> en tiempo real.</p></div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-phone-volume text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Telefónicas</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900 text-gray-900">Capturas especializadas garantizando trazabilidad y calidad total en cada contacto.</p></div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-laptop-code text-3xl text-atica-green mb-6 block text-gray-900"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Web</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900 text-gray-900">Instrumentos digitales con procesos de validación automatizados para estudios rápidos.</p></div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-mask text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Mystery Shopping</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900 text-gray-900 text-gray-900">Evaluaciones de cliente incógnito para medir la calidad del servicio al cliente.</p></div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col"><i class="fa-solid fa-box-open text-3xl text-atica-green mb-6 block text-gray-900"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900 text-gray-900">Pruebas de Producto</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900 text-gray-900">Validamos productos con usuarios reales para medir impacto antes del lanzamiento.</p></div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900"><i class="fa-solid fa-user-group text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3">Focus Group</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Sesiones cualitativas diseñadas por <b>Grupo Atics</b> para profundizar en motivaciones.</p></div>
-                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900"><i class="fa-solid fa-database text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3">Procesamiento</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Depuración y análisis de grandes volúmenes de información bajo estándares rigurosos.</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-900">
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900 text-gray-900"><i class="fa-solid fa-house-chimney-user text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3">Encuestas en Campo</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Operativos presenciales en hogares con supervisión de <b>Grupo Atics</b> en tiempo real.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900"><i class="fa-solid fa-phone-volume text-3xl text-atica-green mb-6 block text-gray-900"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Encuestas Telefónicas</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Capturas especializadas garantizando trazabilidad y calidad total en cada contacto.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900 text-gray-900"><i class="fa-solid fa-laptop-code text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3">Encuestas Web</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Instrumentos digitales con procesos de validación automatizados para estudios rápidos.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900"><i class="fa-solid fa-mask text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Mystery Shopping</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900 text-gray-900">Evaluaciones de cliente incógnito para medir la calidad del servicio al cliente.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900"><i class="fa-solid fa-box-open text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3 text-gray-900">Pruebas de Producto</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Validamos productos con usuarios reales para medir impacto antes del lanzamiento.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900"><i class="fa-solid fa-user-group text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3">Focus Group</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Moderación de grupos focales por expertos de <b>Grupo Atics</b> en Bogotá y el país.</p></div>
+                <div class="linea-card bg-white p-8 rounded-2xl flex flex-col text-gray-900"><i class="fa-solid fa-database text-3xl text-atica-green mb-6 block"></i><h4 class="font-bold text-sm uppercase mb-3">Analítica de Datos</h4><p class="text-xs text-gray-500 leading-relaxed text-gray-900">Depuración y análisis de grandes volúmenes de información bajo estándares rigurosos.</p></div>
                 <div class="linea-card bg-atica-green p-8 rounded-2xl flex flex-col justify-center text-center">
                     <h4 class="text-white font-black uppercase text-sm mb-4">¿Asesoría en estudios de mercado?</h4>
-                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition shadow-lg text-white">Contactar a Grupo Atics</a>
+                    <a href="#contacto" class="bg-green-500 text-white py-3 rounded-lg text-[10px] font-bold uppercase hover:bg-green-400 transition shadow-lg">Contactar a Grupo Atics</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-32 px-6 bg-white border-b text-gray-900">
+    <section id="faq" class="py-32 px-6 bg-white border-b text-gray-900 text-gray-900 text-gray-900">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 text-atica-green text-gray-900">Metodología en Colombia</h2>
+                <h2 class="text-atica-green font-black uppercase text-xs tracking-[0.4em] mb-4 text-atica-green">Metodología en Colombia</h2>
                 <h3 class="text-4xl font-black text-gray-900 uppercase">Preguntas sobre Grupo Atics</h3>
             </div>
             <div class="space-y-4">
-                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900">¿Cuál es el valor agregado de Grupo Atics en el diseño muestral?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Contamos con experticia estadística senior para asegurar representatividad absoluta y optimización de recursos en estudios complejos.</p></div>
+                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer text-gray-900" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight">¿Cuál es el valor agregado de Grupo Atics en el diseño muestral?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
+                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Contamos con experticia senior para asegurar representatividad absoluta y optimización de recursos.</p></div>
                 </div>
-                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900">¿Qué procesos de control de calidad aplica Grupo Atics?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
+                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer text-gray-900" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight">¿Qué procesos de control de calidad aplica Grupo Atics?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
                     <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Implementamos supervisión digital en tiempo real mediante GPS, auditoría al 20% de la muestra y depuración lógica inmediata.</p></div>
                 </div>
-                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900">¿En qué ciudades de Colombia tienen cobertura operativa?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed"><b>Grupo Atics</b> tiene capacidad de despliegue a nivel nacional, cubriendo las principales capitales y zonas rurales dispersas.</p></div>
-                </div>
-                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900 text-gray-900">¿Cómo maneja Grupo Atics la confidencialidad de la información?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed text-gray-900">Cumplimos rigurosamente con la Ley de Protección de Datos Personales (Habeas Data) y estrictos acuerdos de confidencialidad técnica.</p></div>
-                </div>
-                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900 text-gray-900">¿A qué sectores están dirigidos los servicios de Grupo Atics?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed text-gray-900">Atendemos al sector público, organismos internacionales (FAO, PMA), banca, consumo masivo y sector salud.</p></div>
-                </div>
-                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight text-gray-900 text-gray-900">¿Cuánto tiempo toma la ejecución de un estudio promedio?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
-                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed text-gray-900">Los tiempos varían según la complejidad muestral, pero nuestra tecnología móvil permite optimizar las entregas preliminares.</p></div>
+                <div class="faq-item bg-white p-8 rounded-2xl cursor-pointer text-gray-900" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center"><h4 class="font-bold text-gray-900 text-sm uppercase tracking-tight">¿Cómo maneja Grupo Atics la confidencialidad de la información?</h4><i class="fa-solid fa-chevron-down text-atica-green transition"></i></div>
+                    <div class="faq-content"><p class="text-[13px] text-gray-600 mt-6 leading-relaxed">Cumplimos rigurosamente con la Ley de Protección de Datos Personales (Habeas Data) y estrictos acuerdos de confidencialidad.</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="bg-gray-900 text-white py-24 px-6 border-t-8 border-atica-green text-white">
+    <footer id="contacto" class="bg-gray-900 text-white py-24 px-6 border-t-8 border-atica-green">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
                 <div class="mb-10 border-l-4 border-green-500 pl-5 text-white">
@@ -282,50 +250,50 @@
                     <span class="text-[10px] font-bold text-green-400 uppercase tracking-[0.4em] mt-1 block">Recolección de datos y estudios de mercado en Colombia</span>
                 </div>
                 <h2 class="text-4xl font-black mb-8 text-green-400 uppercase italic">Iniciemos su <br>proyecto en Colombia</h2>
-                <div class="space-y-4 opacity-70 mb-10 text-sm">
+                <div class="space-y-4 opacity-70 mb-10 text-sm text-white">
                     <p><i class="fa-solid fa-location-dot mr-3 text-green-500"></i> Calle 25 # 69 51, Bogotá, Colombia</p>
                     <p><i class="fa-solid fa-phone mr-3 text-green-500"></i> +57 3239600075</p>
                     <p><i class="fa-solid fa-envelope mr-3 text-green-500"></i> gerenciaadministrativa@grupoatics.com</p>
                 </div>
             </div>
 
-            <div id="form-container" class="bg-white p-10 rounded-xl shadow-2xl text-gray-900 relative min-h-[500px] flex flex-col justify-center text-gray-900">
+            <div id="form-container" class="bg-white p-10 rounded-xl shadow-2xl text-gray-900 relative min-h-[500px] flex flex-col justify-center">
                 <p class="text-center font-black uppercase text-atica-green mb-6 tracking-widest text-lg">Contacte a Grupo Atics en Bogotá</p>
-                <form id="contact-form" class="space-y-4">
-                    <input type="text" name="Nombre" required placeholder="Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900 text-gray-900">
+                <form id="contact-form" class="space-y-4 text-gray-900 text-gray-900">
+                    <input type="text" name="Nombre" required placeholder="Empresa / Razón Social" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input type="text" name="Contacto" required placeholder="Persona de Contacto" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900 text-gray-900">
-                        <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900 text-gray-900">
+                        <input type="tel" name="Telefono" required placeholder="Número de Celular" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900">
                     </div>
                     <input type="email" name="Email" required placeholder="Email Corporativo" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900">
-                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo puede apoyarle Grupo Atics con sus estudios de mercado?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900 text-gray-900"></textarea>
-                    <div class="flex items-start space-x-3 py-2 text-gray-900 text-gray-900">
-                        <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded cursor-pointer">
-                        <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic text-gray-900/70 text-gray-900 text-gray-900">Autorizo el tratamiento de mis datos personales.</label>
+                    <textarea name="Mensaje" rows="4" placeholder="¿Cómo puede apoyarle Grupo Atics con sus estudios de mercado?" class="w-full p-4 border bg-gray-50 outline-none rounded-lg focus:border-green-600 text-gray-900"></textarea>
+                    <div class="flex items-start space-x-3 py-2">
+                        <input type="checkbox" id="habeas-data" required class="mt-1.5 w-4 h-4 text-green-600 border-gray-300 rounded cursor-pointer text-gray-900">
+                        <label for="habeas-data" class="text-[11px] text-gray-500 cursor-pointer italic text-gray-900/70">Autorizo el tratamiento de mis datos personales.</label>
                     </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl">Enviar Solicitud</button>
+                    <button type="submit" id="submit-btn" class="w-full bg-atica-green text-white font-black py-4 uppercase tracking-widest hover:bg-green-700 transition rounded-lg shadow-xl text-white">Enviar Solicitud</button>
                 </form>
             </div>
         </div>
-        <p class="mt-20 text-center text-[10px] opacity-40 border-t border-white/10 pt-10 text-white">&copy; 2026 Grupo Atics – Estudios de mercado y recolección de datos en Colombia | Bogotá DC</p>
+        <p class="mt-20 text-center text-[10px] opacity-40 border-t border-white/10 pt-10 text-white text-white">&copy; 2026 Grupo Atics – Estudios de mercado y recolección de datos en Colombia | Bogotá DC</p>
     </footer>
 
     <div id="chatbot">
         <div id="chat-window">
-            <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center text-white text-white">
-                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest text-white text-white">Consultoría Grupo Atics</span></div>
-                <button onclick="toggleChat()" class="text-2xl leading-none text-white text-white">&times;</button>
+            <div class="bg-[#128c7e] p-5 text-white flex justify-between items-center">
+                <div class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold text-[10px] uppercase tracking-widest">Consultoría Grupo Atics</span></div>
+                <button onclick="toggleChat()" class="text-2xl leading-none text-white">&times;</button>
             </div>
             <div class="flex-1 p-6 bg-[#e5ddd5] text-[12px] space-y-4 overflow-y-auto">
-                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-gray-900 text-gray-900">Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>¿Busca realizar estudios de mercado o recolección de información en Colombia? Escríbanos aquí.</div>
+                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-gray-900">Hola. Bienvenido a <b>Grupo Atics</b>. <br><br>¿Busca realizar estudios de mercado en Colombia? Escríbanos aquí.</div>
             </div>
-            <div class="p-4 border-t bg-white flex space-x-2 text-gray-900">
+            <div class="p-4 border-t bg-white flex space-x-2">
                 <input type="text" id="wa-message" placeholder="Escriba su consulta..." class="flex-1 text-[12px] outline-none bg-gray-100 rounded-full px-4 py-3 text-gray-900 text-gray-900">
-                <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition text-white text-white"><i class="fa-solid fa-paper-plane text-white text-white"></i></button>
+                <button onclick="sendWhatsApp()" class="bg-[#25D366] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition text-white"><i class="fa-solid fa-paper-plane text-white text-white"></i></button>
             </div>
         </div>
-        <button onclick="toggleChat()" class="bg-[#25D366] w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all text-white active:rotate-12 shadow-green-900/40 text-white text-white">
-            <i class="fa-brands fa-whatsapp text-white text-white"></i>
+        <button onclick="toggleChat()" class="bg-[#25D366] w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all text-white active:rotate-12 shadow-green-900/40">
+            <i class="fa-brands fa-whatsapp text-white"></i>
         </button>
     </div>
 
@@ -333,6 +301,10 @@
         window.onbeforeunload = function () { window.scrollTo(0, 0); };
         if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
         window.scrollTo(0, 0);
+
+        function toggleMobileMenu() { 
+            document.getElementById('mobile-menu').classList.toggle('hidden'); 
+        }
 
         function toggleFaq(element) {
             const isActive = element.classList.contains('active');
@@ -381,7 +353,6 @@
             });
         });
 
-        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
         function toggleChat() { document.getElementById('chatbot').classList.toggle('chat-open'); }
         function sendWhatsApp() {
             const msg = document.getElementById('wa-message').value;
